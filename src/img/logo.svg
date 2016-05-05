@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="86px" height="77px" viewBox="0 0 86 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>0E330057-9996-4EBD-9727-20E33F7306EE</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2BABEE" offset="0%"></stop>
+            <stop stop-color="#2996CE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.9292011%" y1="114.525509%" x2="43.0359446%" y2="30.5115974%" id="linearGradient-2">
+            <stop stop-color="#9E39F6" offset="0%"></stop>
+            <stop stop-color="#2BABEE" offset="100%"></stop>
+        </linearGradient>
+        <path d="M42.5479811,38.8621022 L40.1405971,38.8621022 C18.6269386,38.8621022 1.06896066,21.9293104 0.0721539071,0.656656105 L44.9553651,0.656656105 C55.5039993,0.656656105 64.0553569,9.20691685 64.0553569,19.7593792 C64.0553569,30.3095218 55.502788,38.8621022 44.9553651,38.8621022 L42.5479811,38.8621022 Z" id="path-3"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="7" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#2991C7" offset="0%"></stop>
+            <stop stop-color="#2BABEE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="37.7929028%" y1="15.7934247%" x2="100%" y2="161.074829%" id="linearGradient-8">
+            <stop stop-color="#B674F1" offset="0%"></stop>
+            <stop stop-color="#6B93E8" offset="51.5445631%"></stop>
+            <stop stop-color="#2BABEE" offset="100%"></stop>
+        </linearGradient>
+        <path d="M41.790745,38.2054461 L40.3833609,38.2054461 C18.8697025,38.2054461 1.31172453,21.2726543 0.314917778,-1.55431223e-15 L43.198129,-4.97379915e-14 C53.7467632,-4.97379915e-14 62.2981207,8.55026075 62.2981207,19.1027231 C62.2981207,29.6528657 53.7455519,38.2054461 43.198129,38.2054461 L41.790745,38.2054461 Z" id="path-9"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-11">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop" transform="translate(-480.000000, -48.000000)">
+            <g id="slide-top" transform="translate(0.000000, -2.000000)">
+                <g id="logo" transform="translate(480.000000, 50.000000)">
+                    <g id="Group-Copy">
+                        <g id="Combined-Shape-Copy" transform="translate(0.000000, 37.608486)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Mask" transform="translate(32.063755, 19.759379) scale(-1, 1) translate(-32.063755, -19.759379) ">
+                                <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                                <use fill-opacity="0.799999952" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                            </g>
+                            <path d="M62.620497,3.1041925 L59.5734436,3.1041925 C38.0597851,3.1041925 20.5018072,-13.8285993 19.5050004,-35.1012536 L65.6675505,-35.1012536 C76.2161846,-35.1012536 84.7675422,-26.5509929 84.7675422,-15.9985306 C84.7675422,-5.44838794 76.2149734,3.1041925 65.6675505,3.1041925 L62.620497,3.1041925 Z" fill="#481F7B" opacity="0.5" filter="url(#filter-5)" mask="url(#mask-4)" transform="translate(52.136271, -15.998531) scale(-1, 1) rotate(-180.000000) translate(-52.136271, 15.998531) "></path>
+                            <path d="M62.620497,-1.91027231 L59.5734436,-1.91027231 C38.0597851,-1.91027231 20.5018072,-18.8430641 19.5050004,-40.1157184 L65.6675505,-40.1157184 C76.2161846,-40.1157184 84.7675422,-31.5654577 84.7675422,-21.0129954 C84.7675422,-10.4628527 76.2149734,-1.91027231 65.6675505,-1.91027231 L62.620497,-1.91027231 Z" id="Combined-Shape-Copy-3" fill="#481F7B" opacity="0.7" filter="url(#filter-6)" mask="url(#mask-4)" transform="translate(52.136271, -21.012995) scale(-1, 1) rotate(-180.000000) translate(-52.136271, 21.012995) "></path>
+                        </g>
+                        <g id="Oval-273" transform="translate(23.190083, 0.000000)">
+                            <mask id="mask-10" fill="white">
+                                <use xlink:href="#path-9"></use>
+                            </mask>
+                            <g id="Mask" transform="translate(31.306519, 19.102723) scale(-1, 1) rotate(-180.000000) translate(-31.306519, -19.102723) ">
+                                <use fill="url(#linearGradient-7)" xlink:href="#path-9"></use>
+                                <use fill="url(#linearGradient-8)" xlink:href="#path-9"></use>
+                            </g>
+                            <ellipse fill="#FFFFFF" opacity="0.1" filter="url(#filter-11)" mask="url(#mask-10)" transform="translate(47.254545, 0.626808) rotate(22.000000) translate(-47.254545, -0.626808) " cx="47.2545455" cy="0.6268081" rx="17.2710744" ry="4.3876567"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
