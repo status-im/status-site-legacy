@@ -179,10 +179,15 @@ p {
   -webkit-transform: translate3d(0, 20px, 0);
           transform: translate3d(0, 20px, 0); }
 
-.visible {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0); }
+.gradient-email {
+  width: 360px;
+  opacity: 0;
+  -webkit-transition: opacity .4s ease, -webkit-transform .4s ease;
+  transition: opacity .4s ease, -webkit-transform .4s ease;
+  transition: transform .4s ease, opacity .4s ease;
+  transition: transform .4s ease, opacity .4s ease, -webkit-transform .4s ease;
+  -webkit-transform: translate3d(0, 20px, 0);
+          transform: translate3d(0, 20px, 0); }
 
 input[type=email] {
   padding: 15px;
@@ -666,21 +671,22 @@ input[type=email] {
   vertical-align: top;
   text-align: center;
   opacity: 0;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: opacity .4s ease, -webkit-transform .4s ease;
+  transition: opacity .4s ease, -webkit-transform .4s ease;
+  transition: transform .4s ease, opacity .4s ease;
+  transition: transform .4s ease, opacity .4s ease, -webkit-transform .4s ease;
   -webkit-transform: translate3d(-40px, 0, 0) scale(1);
           transform: translate3d(-40px, 0, 0) scale(1); }
   .block-square:first-child {
-    -webkit-transition-delay: .120s;
-            transition-delay: .120s; }
-  .block-square:nth-child(2) {
     -webkit-transition-delay: 0;
             transition-delay: 0; }
+  .block-square:nth-child(2) {
+    -webkit-transition-delay: .120s;
+            transition-delay: .120s; }
   .block-square:last-child {
+    margin-right: 0;
     -webkit-transition-delay: .240s;
             transition-delay: .240s; }
-  .block-square:last-child {
-    margin-right: 0; }
   .block-square h3 {
     margin-top: 10px;
     margin-bottom: 0;
@@ -692,6 +698,11 @@ input[type=email] {
     color: #808591;
     font-size: 12px;
     line-height: 18px; }
+
+.shown .block-square {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1); }
 
 .two-third {
   margin-top: 10%;
@@ -1077,6 +1088,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
+  background-color: #eef2f5;
   font-weight: 400;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;

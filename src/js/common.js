@@ -11,19 +11,21 @@ $(function() {
 
   $(document).ready(function(){
 
-    $(".status-text").addClass("shown");
+    setTimeout(function() {
+        $(".status-text").addClass("shown");
+    },400);
     setTimeout(function() {
         $(".status-email").addClass("shown");
-    },200);
+    },500);
     setTimeout(function() {
         $(".phone-primary").addClass("shown");
-    },300);
+    },600);
     setTimeout(function() {
         $(".phone-secondary").addClass("shown");
-    },460);
+    },700);
     setTimeout(function() {
         $(".main-header").addClass("shown");
-    },700);
+    },1000);
 
      $(".email-input").on('click', function(){
        $(".email").addClass("focused");
@@ -78,6 +80,9 @@ $(function() {
 
   $('.gradient-text').waypoint(function() {
       $('.gradient-text').addClass('shown');
+      setTimeout(function() {
+          $(".gradient-email").addClass("shown");
+      },100);
   }, { offset: '90%' });
 
 

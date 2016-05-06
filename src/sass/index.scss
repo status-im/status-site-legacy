@@ -110,13 +110,11 @@ section {
     line-height: 33px;
   }
 }
+
 .phone {
   @include span-columns(6);
 }
 
-.phone-cut {
-  //margin-top: 240px;
-}
 
 .phone-image {
   position: relative;
@@ -168,10 +166,11 @@ p {
   transform: translate3d(0, 20px, 0);
 }
 
-.visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-
+.gradient-email {
+  width: 360px;
+  opacity: 0;
+  transition: transform .4s ease, opacity .4s ease;
+  transform: translate3d(0, 20px, 0);
 }
 
 input[type=email] {
@@ -266,10 +265,6 @@ input[type=email] {
 }
 
 .block-white {
-  //margin-right: 35px;
-  // opacity: 0;
-  // transition: transform .4s ease, opacity .4s ease;
-  // transform: translate3d(0, -20px, 0) scale(0.9);;
   padding: 33px 50px;
   border-right: 1px solid #dde2e6;
   border-radius: 0;
@@ -690,19 +685,18 @@ input[type=email] {
   vertical-align: top;
   text-align: center;
   opacity: 0;
-  transition: all .4s ease;
+  transition: transform .4s ease, opacity .4s ease;
   transform: translate3d(-40px, 0, 0) scale(1);
   &:first-child {
-    transition-delay: .120s;
-  }
-  &:nth-child(2) {
     transition-delay: 0;
   }
-  &:last-child {
-    transition-delay: .240s;
+  &:nth-child(2) {
+    transition-delay: .120s;
   }
   &:last-child {
     margin-right: 0;
+    transition-delay: .240s;
+
   }
   h3 {
     margin-top: 10px;
@@ -717,6 +711,11 @@ input[type=email] {
     font-size: 12px;
     line-height: 18px;
   }
+}
+
+.shown .block-square {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
 }
 
 .two-third {
