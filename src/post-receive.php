@@ -1,7 +1,7 @@
 <?php
 $command = "cd /var/www/status-site && git reset --hard HEAD && git pull && gulp build";
 
-// TODO check
+// TODO check against ip or secret hash
 
 if ( $_SERVER['HTTP_X_GITHUB_EVENT'] == 'push' ) {
 
