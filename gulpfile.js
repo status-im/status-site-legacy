@@ -96,6 +96,10 @@ gulp.task('build', ['clean', 'styles', 'scripts', 'images'], function() {
   .pipe(useref({noAssets:true}))
   .pipe(gulp.dest('build'));
 
+  gulp.src('src/*.php')
+  .pipe(useref({noAssets:true}))
+  .pipe(gulp.dest('build'));
+
 });
 
 gulp.task('default', ['watch']);
