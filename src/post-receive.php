@@ -1,5 +1,5 @@
 <?php
-$command = "cd /var/www/status-site && git reset --hard HEAD && git pull && gulp build";
+$command = "cd /var/www/status-site && git reset --hard HEAD && git pull origin master && gulp build";
 
 // TODO check against ip or secret hash
 
