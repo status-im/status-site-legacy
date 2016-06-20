@@ -443,7 +443,7 @@ input[type=email] {
 }
 
 .section-heading-odd {
-  float: right;
+  float: none;
   margin: 0 auto;
   width: 360px;
   vertical-align: middle;
@@ -979,7 +979,7 @@ footer {
 .phone-odd {
   position: relative;
   top: 73px;
-  float: left;
+  float: right;
 }
 
 .header-wrapper {
