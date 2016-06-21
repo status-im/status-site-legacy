@@ -1166,20 +1166,37 @@ body input:required:valid, body textarea:required:valid {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /*Disable Animation on Mobile Devices */
-  .animated {
-    -webkit-transition-property: none !important;
-    /*CSS transitions */
-    transition-property: none !important;
-    -webkit-transform: none !important;
-    -ms-transform: none !important;
-    /*CSS transforms */
-    transform: none !important;
-    /*CSS animations */
-    -webkit-animation: none !important;
-    animation: none !important; } }
+  .table-left, .table-right {
+    display: block;
+    width: 100%; }
+  .header-wrapper {
+    overflow: visible; }
+  .phone-header {
+    top: 65px;
+    left: 45px; }
+  .phone-even {
+    display: none; }
+  .section-table {
+    height: 43vh; }
+  .table-one-third {
+    display: none; }
+  .table-two-third {
+    display: block;
+    width: 100%; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .main-navigation {
+    display: none; }
+  .main-header {
+    margin-top: 20px; }
+  .logo-wrapper {
+    position: static; }
+  .main-logo {
+    left: 45%; }
+  .logo-shadow {
+    left: 42%; } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ========== */
 /* Custom, iPhone Retina */
