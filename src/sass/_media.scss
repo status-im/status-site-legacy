@@ -73,6 +73,41 @@
     left: 42%;
   }
 
+  footer {
+    position: relative;
+  }
+
+  .footer-wrapper {
+    width: 100%;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  .footer-half {
+    padding: 0;
+    width: 100%;
+  }
+
+  .footer-half:nth-child(2) {
+    display: none;
+  }
+
+  .footer-logo-mobile {
+    display: block;
+  }
+
+  .section-heading-odd {
+    margin-left: 0;
+  }
+
 }
 
 /* Custom, iPhone Retina */

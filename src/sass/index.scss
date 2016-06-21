@@ -911,6 +911,18 @@ footer {
   background-repeat: no-repeat;
 }
 
+.footer-logo-mobile {
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 43px;
+  height: 39px;
+  background-image: url('../img/logo-gray.svg');
+  background-position: center;
+  background-size: 43px;
+  background-repeat: no-repeat;
+}
+
 .footer-links {
   margin-top: 40px;
   a {
