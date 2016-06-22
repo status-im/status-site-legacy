@@ -98,7 +98,7 @@ $(function() {
 
   var swiper1 = new Swiper('.swiper1', {
     loop: true,
-    autoplay: 3000,
+    autoplay: 2000,
     effect: 'fade',
     spaceBetween: 30,
     fade: {
@@ -107,7 +107,7 @@ $(function() {
 });
 var swiper2 = new Swiper('.swiper2', {
   loop: true,
-  autoplay: 3000,
+  autoplay: 2000,
   effect: 'slide',
   nextButton: '.swiper-button-next',
   prevButton: '.swiper-button-prev',
