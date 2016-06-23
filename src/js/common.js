@@ -105,13 +105,13 @@ $(function() {
       crossFade: true
     }
 });
-var swiper2 = new Swiper('.swiper2', {
-  loop: true,
-  autoplay: 2000,
-  effect: 'slide',
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-});
+  var swiper2 = new Swiper('.swiper2', {
+    loop: true,
+    autoplay: 2000,
+    effect: 'slide',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  });
 
   });
 
