@@ -85,6 +85,33 @@ $(function() {
       },100);
   }, { offset: '90%' });
 
+    //initialize swiper when document ready
+  // var mySwiper = new Swiper ('.swiper-container', {
+  //   // Optional parameters
+  //   loop: true,
+  //   autoplay: 3000,
+  //   effect: 'fade',
+  //   nextButton: '.swiper-button-next',
+  //   prevButton: '.swiper-button-prev',
+  //   spaceBetween: 30
+  // });
+
+  var swiper1 = new Swiper('.swiper1', {
+    loop: true,
+    autoplay: 2000,
+    effect: 'fade',
+    spaceBetween: 30,
+    fade: {
+      crossFade: true
+    }
+});
+var swiper2 = new Swiper('.swiper2', {
+  loop: true,
+  autoplay: 2000,
+  effect: 'slide',
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+});
 
   });
 
