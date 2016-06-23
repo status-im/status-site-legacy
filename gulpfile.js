@@ -40,8 +40,7 @@ gulp.task('scripts', function() {
   return gulp.src([
     'src/libs/jquery/dist/jquery.min.js',
     'src/libs/modernizr/modernizr-custom.js',
-    'src/libs/waypoints/waypoints.min.js',
-    'src/libs/swiper/js/swiper.min.js'
+    'src/libs/waypoints/waypoints.min.js'
     ])
     .pipe(plumber())
     .pipe(concat('libs.min.js'))

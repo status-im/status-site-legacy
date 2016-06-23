@@ -15,121 +15,34 @@
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
+  /*Disable Animation on Mobile Devices */
 
-  .table-left, .table-right {
-    display: block;
-    width: 100%;
+  .animated {
+    -webkit-transition-property: none !important;
+       -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+    /*CSS transitions */
+         -o-transition-property: none !important;
+            transition-property: none !important;
+    -webkit-transform: none !important;
+       -moz-transform: none !important;
+        -ms-transform: none !important;
+    /*CSS transforms */
+         -o-transform: none !important;
+            transform: none !important;
+    /*CSS animations */
+    -webkit-animation: none !important;
+       -moz-animation: none !important;
+        -ms-animation: none !important;
+         -o-animation: none !important;
+            animation: none !important;
   }
-
-  .header-wrapper {
-    overflow: visible;
-  }
-
-  .phone-header {
-    top: 65px;
-    left: 45px;
-  }
-
-  .phone-even {
-    display: none;
-  }
-
-  .section-table {
-    height: 43vh;
-  }
-
-  .table-one-third {
-    display: none;
-  }
-
-  .table-two-third {
-    display: block;
-    width: 100%;
-  }
-
-  .mobile-slider {
-    display: block;
-  }
-
-  .white-blocks {
-    display: none;
-  }
-
-  .mobile-section-text {
-    display: block;
-  }
-
-  .block {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-
-  .mobile-hidden {
-    display: none;
-  }
-
 }
 
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
-
-  .main-navigation {
-    display: none;
-  }
-
-  .main-header {
-    margin-top: 20px;
-  }
-
-  .logo-wrapper {
-    position: static;
-  }
-
-  .main-logo {
-    left: 45%;
-  }
-
-  .logo-shadow {
-    left: 42%;
-  }
-
-  footer {
-    position: relative;
-  }
-
-  .footer-wrapper {
-    width: 100%;
-  }
-
-  .footer-links {
-    display: none;
-  }
-
-  .footer-logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-  }
-
-  .footer-half {
-    padding: 0;
-    width: 100%;
-  }
-
-  .footer-half:nth-child(2) {
-    display: none;
-  }
-
-  .footer-logo-mobile {
-    display: block;
-  }
-
-  .section-heading-odd {
-    margin-left: 0;
-  }
-
+  /* */
 }
 
 /* Custom, iPhone Retina */
