@@ -147,7 +147,7 @@
 	try {
 	    err_style = mc_custom_error_style;
 	} catch(e){
-	    err_style = '.mc_embed_signup input.mce_inline_error { border-color:#6B0505; } .mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#eef2f5; font-weight: normal; z-index: 1; color:#6B0505; }';
+	    err_style = '.mc_embed_signup input.mce_inline_error { border-color:#6B0505; } .mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:transparent; font-weight: normal; z-index: 1; color:#6B0505; }';
 	}
 	var head = document.getElementsByTagName('head')[0];
 	var style = document.createElement('style');
@@ -254,9 +254,15 @@
 		    if (resp.result == "success"){
 		        $('.mce-'+resp.result+'-response').show();
 		        $('.mce-'+resp.result+'-response').html(resp.msg);
-		        $('.mc-embedded-subscribe-form').each(function(){
+		        $('#mc-embedded-subscribe-form').each(function(){
 		            this.reset();
 		    	});
+						$('.mc-embedded-subscribe-form').each(function(){
+								this.reset();
+					});
+					setTimeout(function() {
+						$('.email').fadeOut();
+					},5000);
 
 		    // If the form has errors, display them, inline if possible, or appended to .mce-error-response
 		    } else {
@@ -311,7 +317,7 @@
 		}
 	}
 
-	window.mc.mce_validator = $(".mc-embedded-subscribe-form").validate({
+	window.mc.mce_validator = $("#mc-embedded-subscribe-form").validate({
 
 		// Set error HTML: <div class="mce_inline_error"></div>
 		errorClass: "mce_inline_error",
@@ -343,6 +349,38 @@
 		}
  	});
 
+	window.mc.mce_validator = $(".mc-embedded-subscribe-form").validate({
+
+		// Set error HTML: <div class="mce_inline_error"></div>
+		errorClass: "mce_inline_error",
+  		errorElement: "div",
+
+  		// Validate fields on keyup, focusout and blur.
+		onkeyup: false,
+		onfocusout: function(element) {
+			if (!mc.isTooEarly(element)) {
+				$(element).valid();
+			}
+		},
+		onblur: function(element) {
+			if (!mc.isTooEarly(element)) {
+				$(element).valid();
+			}
+		},
+		// Grouping fields makes jQuery Validation display one error for all the fields in the group
+		// It doesn't have anything to do with how the fields are validated (together or separately),
+		// it's strictly for visual display of errors
+		groups: mc.getGroups(),
+		// Place a field's inline error HTML just before the div.mc-field-group closing tag
+		errorPlacement: function(error, element) {
+			element.closest('.mc-field-group-2').append(error);
+      	},
+      	// Submit the form via ajax (see: jQuery Form plugin)
+		submitHandler: function(form) {
+			$(form).ajaxSubmit(mc.ajaxOptions);
+		}
+ 	});
+
  	window.mc.ajaxOptions = {
 		url: mc.getAjaxSubmitUrl(),
 		type: 'GET',
@@ -366,3 +404,7 @@
     });
 
 }(jQuery));
+
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));
+
+var $mcj = jQuery.noConflict(true);

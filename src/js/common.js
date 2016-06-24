@@ -85,16 +85,7 @@ $(function() {
       },100);
   }, { offset: '90%' });
 
-    //initialize swiper when document ready
-  // var mySwiper = new Swiper ('.swiper-container', {
-  //   // Optional parameters
-  //   loop: true,
-  //   autoplay: 3000,
-  //   effect: 'fade',
-  //   nextButton: '.swiper-button-next',
-  //   prevButton: '.swiper-button-prev',
-  //   spaceBetween: 30
-  // });
+  // Swiper
 
   var swiper1 = new Swiper('.swiper1', {
     loop: true,
