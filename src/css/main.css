@@ -214,6 +214,7 @@ input[type=email] {
   display: block;
   width: 34px;
   height: 34px;
+  border: none;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background-color: rgba(182, 116, 241, 0.2);
