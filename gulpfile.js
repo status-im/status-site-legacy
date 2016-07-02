@@ -53,6 +53,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {
   gulp.watch('src/sass/**/*.+(sass|scss)', ['styles']);
   gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('src/demo/**/*', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
