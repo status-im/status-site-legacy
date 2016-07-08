@@ -1137,6 +1137,9 @@ footer {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
+.hashtag {
+  color: #7099e6; }
+
 /* Import Libs SASS/CSS */
 /**
  * Swiper 3.3.1
