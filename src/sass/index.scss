@@ -206,6 +206,7 @@ input[type=email] {
   background-position: center;
   background-size: 24px;
   background-repeat: no-repeat;
+  text-indent: -10000px;
   cursor: pointer;
 }
 
@@ -693,6 +694,14 @@ input[type=email] {
     font-size: 14px;
     line-height: 24px;
   }
+  p:last-child {
+    position: absolute;
+    left: 65%;
+    margin-top: 30px;
+    @media only screen and (max-width: 768px) {
+      position: static;
+    }
+  }
 }
 
 .block-square {
@@ -738,7 +747,7 @@ input[type=email] {
 
 .mobile-block-square {
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 30px;
   padding: 25px 20px;
   width: 160px;
   height: 210px;
@@ -1172,4 +1181,8 @@ footer {
 
 .hashtag {
   color: #7099e6;
+}
+
+.section-row {
+  display: none;
 }

@@ -16,6 +16,10 @@
 
 @media only screen and (max-width: 768px) {
 
+  .table-center {
+    overflow: hidden;
+  }
+
   .table-left, .table-right {
     display: block;
     width: 100%;
@@ -67,6 +71,11 @@
 
   .mobile-hidden {
     display: none;
+  }
+
+  .section-row {
+    display: block;
+    border-bottom: 1px solid #ddd;
   }
 
 }
@@ -130,12 +139,51 @@
     margin-left: 0;
   }
 
+  .tags {
+    transform: scale(0.8);
+  }
+
 }
 
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width: 320px) {
-  /* */
+  .status-email, .status-text {
+    width: 320px;
+    > h1 {
+      font-size: 20px;
+    }
+    > p {
+      padding: 0 15px;
+    }
+  }
+  .mobile-slider {
+    width: 320px;
+  }
+  .section-heading-even, .section-heading-odd {
+    width: 320px;
+    > h2 {
+      font-size: 18px;
+    }
+    > p {
+      padding: 0 15px;
+    }
+  }
+  .tags {
+    left: -10px;
+  }
+  .gradient-email, .gradient-text {
+    width: 320px;
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .section-gradient .section-gradient-text {
+    width: 320px;
+    p {
+      font-weight: normal;
+    }
+  }
 }
 
 /*==========  Mobile First Method  ========== */
