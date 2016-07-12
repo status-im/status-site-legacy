@@ -681,12 +681,12 @@ input[type=email] {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px; }
-  .section-heading-even p:last-child {
+  .section-heading-even p.statuses {
     position: absolute;
     left: 65%;
     margin-top: 30px; }
     @media only screen and (max-width: 768px) {
-      .section-heading-even p:last-child {
+      .section-heading-even p.statuses {
         position: static; } }
 
 .block-square {
