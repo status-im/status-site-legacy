@@ -228,6 +228,22 @@ input[type=email] {
   text-indent: -10000px;
   cursor: pointer; }
 
+a.gradient-button {
+  display: block;
+  margin: 20px auto;
+  width: 34px;
+  height: 34px;
+  border: none;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fff;
+  background-image: url("../img/arrow.svg");
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  text-indent: -10000px;
+  cursor: pointer; }
+
 .section-heading {
   margin: 0 auto;
   margin-top: 80px;
@@ -1148,6 +1164,38 @@ footer {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1) rotate(-90deg);
+            transform: scale(1) rotate(-90deg); }
+  50% {
+    -webkit-transform: scale(1.2) rotate(-90deg);
+            transform: scale(1.2) rotate(-90deg); }
+  to {
+    -webkit-transform: scale(1) rotate(-90deg);
+            transform: scale(1) rotate(-90deg); } }
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1) rotate(-90deg);
+            transform: scale(1) rotate(-90deg); }
+  50% {
+    -webkit-transform: scale(1.2) rotate(-90deg);
+            transform: scale(1.2) rotate(-90deg); }
+  to {
+    -webkit-transform: scale(1) rotate(-90deg);
+            transform: scale(1) rotate(-90deg); } }
+
+.pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+          animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; }
+
 .hashtag {
   color: #7099e6; }
 
@@ -1160,54 +1208,58 @@ footer {
 .show {
   display: block; }
 
-#maitre-widget-container {
-  width: 320px; }
-  #maitre-widget-container div[data-maitre-field-submit] {
-    position: relative; }
-  #maitre-widget-container input {
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 15px;
-    padding-right: 45px;
-    width: 240px;
-    height: 46px;
-    border: 0;
-    -webkit-border-radius: 8px;
-            border-radius: 8px;
-    background-color: #fff;
-    font-size: 14px; }
-  #maitre-widget-container button {
-    position: absolute;
-    top: -60px;
-    right: 46px;
-    display: block;
-    width: 34px;
-    height: 34px;
-    border: none;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    background-color: rgba(182, 116, 241, 0.2);
-    background-image: url("../img/arrow.svg");
-    background-position: center;
-    background-size: 24px;
-    background-repeat: no-repeat;
-    text-indent: -10000px;
-    cursor: pointer; }
-  #maitre-widget-container h2 {
-    margin-bottom: 20px; }
-  #maitre-widget-container h4 {
-    margin: 10px auto;
-    color: #000;
-    font-weight: 400;
-    font-size: 36px; }
-  #maitre-widget-container p {
-    margin-bottom: 20px;
-    color: #fff !important; }
-  #maitre-widget-container div[data-maitre-content] {
-    display: none; }
-    #maitre-widget-container div[data-maitre-content].show {
-      display: block; }
+#maitre-widget-container div[data-maitre-field-submit] {
+  position: relative; }
+
+#maitre-widget-container input {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding-right: 45px;
+  width: 240px;
+  height: 46px;
+  border: 0;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px; }
+
+#maitre-widget-container button {
+  position: absolute;
+  top: -60px;
+  right: 6px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: none;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: rgba(182, 116, 241, 0.2);
+  background-image: url("../img/arrow.svg");
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  text-indent: -10000px;
+  cursor: pointer; }
+
+#maitre-widget-container h2 {
+  margin-bottom: 20px; }
+
+#maitre-widget-container h4 {
+  margin: 10px auto;
+  color: #000;
+  font-weight: 400;
+  font-size: 36px; }
+
+#maitre-widget-container p {
+  margin-bottom: 20px;
+  color: #fff !important; }
+
+#maitre-widget-container div[data-maitre-content] {
+  display: none; }
+  #maitre-widget-container div[data-maitre-content].show {
+    display: block; }
 
 #maitre-widget-container a.maitre-widget-social {
   position: relative !important;
