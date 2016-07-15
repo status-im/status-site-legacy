@@ -27,7 +27,7 @@ $(function() {
         $(".main-header").addClass("shown");
     },1000);
 
-     $(".email-input").on('click', function(){
+     $(".email input").on('click', function(){
        $(".email").addClass("focused");
        setTimeout(function() {
            $(".email").removeClass("focused");

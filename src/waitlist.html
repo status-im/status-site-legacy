@@ -69,10 +69,44 @@
                   </div>
                   <div class="status-email">
                   <div class="email">
+
                     <script type="text/javascript">
-                              window.Maitre = { uuid: "MF203200dfd5", test_mode: true, require_name: false };
+
+                      window.Maitre = {
+                        uuid: "MF203200dfd5", test_mode: true, require_name: false,
+                        callbacks: {
+                          afterSuccess: function(data, form) {
+
+                            jQuery("[data-maitre-content]").removeClass("show");
+                            jQuery("#modal_maitre").html(jQuery("[data-maitre-content]").html());
+
+                            $.magnificPopup.open({
+                              items: {
+                                src: "#modal_maitre",
+                              },
+                              callbacks: {
+                                beforeOpen: function() {
+                                  this.st.mainClass = "mfp-zoom-in";
+                                }
+                              },
+                              removalDelay: 200,
+                              type: "inline"
+                            });
+
+                            jQuery(".maitre-field input").val("");
+                            jQuery("[data-maitre-submit-button]").prop("disabled", false).html(Maitre.labels.submit_button);
+
+                          }
+                        }
+                      };
                     </script>
+
+                    <!-- <script type="text/javascript">
+                              window.Maitre = { uuid: "MF203200dfd5", test_mode: true, require_name: false };
+                    </script> -->
                     <script data-maitre src="https://maitreapp.co/widget.js" async></script>
+                    <div id="modal_maitre" class="popup mfp-with-anim mfp-hide medium">
+</div>
                   </div>
                   </div>
               </div>
