@@ -70,11 +70,24 @@
                   <div class="status-email">
                   <div class="email">
 
+<!-- Maitre app integration
+    DO NOT FORGET TO REMOVE <TEST_MODE:TRUE PROPERTY> AFTER TESTING
+  -->
                     <script type="text/javascript">
 
                       window.Maitre = {
                         uuid: "MF203200dfd5", test_mode: true, require_name: false,
                         callbacks: {
+
+                          afterLoad: function() {
+                            jQuery(".maitre-field input").on('focus', function(){
+                              jQuery(".email").addClass("focused");
+                              setTimeout(function() {
+                                  jQuery(".email").removeClass("focused");
+                              },400);
+                           });
+                          },
+
                           afterSuccess: function(data, form) {
 
                             jQuery("[data-maitre-content]").removeClass("show");
@@ -101,12 +114,14 @@
                       };
                     </script>
 
-                    <!-- <script type="text/javascript">
-                              window.Maitre = { uuid: "MF203200dfd5", test_mode: true, require_name: false };
-                    </script> -->
                     <script data-maitre src="https://maitreapp.co/widget.js" async></script>
+
+<!-- END MAITRE SCRIPT -->
+
+                    <!-- Magnific Popup Modal for Maitre -->
                     <div id="modal_maitre" class="popup mfp-with-anim mfp-hide medium">
-</div>
+                    </div>
+
                   </div>
                   </div>
               </div>

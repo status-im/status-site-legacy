@@ -1248,6 +1248,9 @@ footer {
   #maitre-widget-container div[data-maitre-content].show {
     display: block; }
 
+#maitre-widget-container a[data-maitre-status] {
+  display: none; }
+
 a.maitre-widget-social {
   position: relative !important;
   display: inline-block !important;

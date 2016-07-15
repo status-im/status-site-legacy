@@ -27,13 +27,6 @@ $(function() {
         $(".main-header").addClass("shown");
     },1000);
 
-     $(".email input").on('click', function(){
-       $(".email").addClass("focused");
-       setTimeout(function() {
-           $(".email").removeClass("focused");
-       },400);
-    });
-
     $(".email-button").on('click', function(){
       $(".email").addClass("shaky");
       setTimeout(function() {

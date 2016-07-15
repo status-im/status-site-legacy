@@ -1277,6 +1277,9 @@ footer {
       display: block;
     }
   }
+  a[data-maitre-status] {
+    display: none;
+  }
 }
 
 a.maitre-widget-social {
