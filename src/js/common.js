@@ -101,12 +101,13 @@ $(function() {
 
   // Smooth scroll to top and input focus
 
-  $(".gradient-button").click(function(evt) {
-    evt.preventDefault();
+  $(".gradient-button").click(function() {
     $('html, body').animate({
         scrollTop: 0
     }, 1000);
-    $('#maitre-field-email input').focus();
+    setTimeout(function(){
+      $('#maitre-field-email input').focus();
+    },1000);
 });
 
 });
