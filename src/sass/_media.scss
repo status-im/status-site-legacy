@@ -84,6 +84,19 @@
 
 @media only screen and (max-width: 480px) {
 
+  .swiper-button-prev, .swiper-button-next {
+    top: 55%;
+    width: 20px;
+    height: 30px;
+    background-size: 20px 30px;
+  }
+  .swiper-button-prev {
+    left: 20px;
+  }
+  .swiper-button-next {
+    right: 20px;
+  }
+
   .main-navigation {
     display: none;
   }
@@ -140,14 +153,48 @@
   }
 
   .tags {
+    left: -10px;
     transform: scale(0.8);
   }
-
+  #maitre-content {
+    padding: 15px;
+    width: 360px;
+    h4[data-maitre-people-ahead-number] {
+      top: 55%;
+      left: 17%;
+      font-size: 2em;
+    }
+    p[data-maitre-people-ahead-text] {
+      top: 70%;
+      left: 7%;
+      font-size: 1em;
+    }
+    h4[data-maitre-people-behind-number] {
+      top: 55%;
+      left: 66%;
+      font-size: 2em;
+    }
+    p[data-maitre-people-behind-text] {
+      top: 70%;
+      left: 57%;
+      font-size: 1em;
+    }
+    div[data-maitre-share-container] {
+      padding-top: 70px;
+    }
+  }
+  .section-heading-even, .section-heading-odd > p, .section-gradient-text {
+    padding: 0 15px;
+  }
 }
 
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width: 320px) {
+  .mobile-block {
+    padding: 30px;
+    width: 320px;
+  }
   .status-email, .status-text {
     width: 320px;
     > h1 {
@@ -170,7 +217,8 @@
     }
   }
   .tags {
-    left: -10px;
+    left: -35px;
+    transform: scale(0.7);
   }
   .gradient-email, .gradient-text {
     width: 320px;
@@ -183,6 +231,10 @@
     p {
       font-weight: normal;
     }
+  }
+  #maitre-content {
+    padding: 15px;
+    width: 320px;
   }
 }
 
@@ -209,7 +261,10 @@
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-  /* */
+  .block {
+    padding: 30px;
+    width: 320px;
+  }
 }
 
 /* Large Devices, Wide Screens */

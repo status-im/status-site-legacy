@@ -99,4 +99,14 @@ $(function() {
 
   });
 
+  // Smooth scroll to top and input focus
+
+  $(".gradient-button").click(function(evt) {
+    evt.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+    $('#maitre-field-email input').focus();
+});
+
 });
