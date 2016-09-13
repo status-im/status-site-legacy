@@ -42,7 +42,6 @@ gulp.task('scripts', function() {
     'src/libs/modernizr/modernizr-custom.js',
     'src/libs/waypoints/waypoints.min.js',
     'src/libs/swiper/js/swiper.min.js',
-    'src/libs/magnific-popup/jquery.magnific-popup.min.js'
     ])
     .pipe(plumber())
     .pipe(concat('libs.min.js'))

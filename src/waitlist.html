@@ -104,7 +104,6 @@
                         jQuery("#maitre-share-container").html(
                           '<div class="footer-icons-social"><a href="#" class="footer-icon icon-github"></a><a href="#" class="footer-icon icon-twitter"></a><a href="#" class="footer-icon icon-facebook"></a></div>');
                         jQuery(".gradient-text").empty();
-                        jQuery("#maitre-content").clone().appendTo(".gradient-text");
                         if (data.response == "subscriber_created") {
                           ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
                         }
