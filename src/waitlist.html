@@ -78,13 +78,10 @@
             <div class="status-email">
               <div class="email">
 
-                <!-- Maitre app integration
-    DO NOT FORGET TO REMOVE <TEST_MODE:TRUE PROPERTY> AFTER TESTING
-  -->
+                <!-- Maitre app integration  -->
                 <script type="text/javascript">
                   window.Maitre = {
                     uuid: "MF203200dfd5",
-                    test_mode: true,
                     require_name: false,
                     callbacks: {
 
@@ -107,7 +104,7 @@
                         if (data.response == "subscriber_created") {
                           ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
                         }
-                      }
+                      },
                     }
                   };
                 </script>

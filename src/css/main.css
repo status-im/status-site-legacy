@@ -189,7 +189,7 @@ p {
   -webkit-transform: translate3d(0, 20px, 0);
           transform: translate3d(0, 20px, 0); }
   .gradient-email .email {
-    width: 320px;
+    width: 240px;
     height: auto; }
 
 input[type=email] {
