@@ -27,13 +27,6 @@ $(function() {
         $(".main-header").addClass("shown");
     },1000);
 
-     $(".email-input").on('click', function(){
-       $(".email").addClass("focused");
-       setTimeout(function() {
-           $(".email").removeClass("focused");
-       },400);
-    });
-
     $(".email-button").on('click', function(){
       $(".email").addClass("shaky");
       setTimeout(function() {
@@ -105,5 +98,16 @@ $(function() {
   });
 
   });
+
+  // Smooth scroll to top and input focus
+
+  $(".gradient-button").click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+    setTimeout(function(){
+      $('#maitre-field-email input').focus();
+    },1000);
+});
 
 });
