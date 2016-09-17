@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
 
-  <title>Status | Mobile Ethereum Client</title>
-  <meta name="description" content="The mobile light-client">
+  <title>Status | The Mobile Ethereum Client</title>
+  <meta name="description" content="Status is a mobile DApp browser and messenger for Ethereum. Join us in making Ethereum part of our everyday lives and interactions.">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,9 +44,26 @@
     heap.load("1816593697");
   </script>
 
+
   <!-- build:css css/main.min.css -->
   <link rel="stylesheet" href="css/main.css">
   <!-- endbuild -->
+
+  <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+        var foo = getParameterByName('maitre_code'); // Referral Code
+        var foo = getParameterByName('maitre_position'); // Waitlist Position
+
+  </script>
 
 </head>
 
@@ -77,46 +94,25 @@
         <div class="table-left">
           <div class="status">
             <div class="status-text">
-              <h1>Status, more than a mobile wallet.</h1>
-              <p>Status is a browser, messenger, and gateway to the decentralised world of Ethereum.</p>
-            </div>
-            <div class="status-email">
+              <h1>Thanks for confirming your email.</h1>
+
+              <p>You'll be notifed when Status is ready to launch.<br /> Help us spread the word by inviting your friends! The more friends you invite, the sooner you'll get access: </p>
+          
+               <div class="footer-icons-social">
+                <a href="mailto:?&subject=Ethereum Mobile Client&body=Hey,%20I%20just%20signed%20up%20to%20Status%20-%20it's%20mobile%20client%20built%20on%20Ethereum,%20check%20it%20out!%20https%3A//status.im/invite/MAITRE_CODE" class="footer-icon icon-email" target="_blank"></a>
+
+                <a href="https://twitter.com/home?status=I%20just%20signed%20up%20to%20%40ethstatus%20-%20an%20%23ethereum%20%23dapps%20browser%20for%20mobile%3A%20https%3A//status.im/invite/MAITRE_CODE" target="_blank" class="footer-icon icon-twitter"></a>
+
+                <a href="http://www.facebook.com/sharer.php?u=https%3A//status.im/invite/MAITRE_CODE" class="footer-icon icon-facebook"></a>
+              </div>
+
+               <p>Or share your unique link:</p><br/>
+               <div class="status-email" style="width:314px;margin:auto">
+               <input type="email" value="https://status.im/invite/MAITRE_CODE" >
               <div class="email">
 
-                <!-- Maitre app integration  -->
-                <script type="text/javascript">
-                  window.Maitre = {
-                    uuid: "MF203200dfd5",
-                    require_name: false,
-                    callbacks: {
+            </div>
 
-                      afterLoad: function() {
-                        jQuery(".maitre-field input").on('focus', function() {
-                          jQuery(".email").addClass("focused");
-                          setTimeout(function() {
-                            jQuery(".email").removeClass("focused");
-                          }, 400);
-                        });
-                      },
-
-                      afterSuccess: function(data, form) {
-                        jQuery(".status-text").removeClass('shown');
-                        jQuery("#maitre-verification").html(
-                          "Remember to confirm your email to be added to the signup queue. <br /> Improve your position by referring your friends and spreading the word.");
-                        jQuery("#maitre-share-container").html(
-                          '<div class="footer-icons-social"><a href="#" class="footer-icon icon-email"></a><a href="#" class="footer-icon icon-twitter"></a><a href="#" class="footer-icon icon-facebook"></a></div>');
-                        jQuery(".gradient-text").empty();
-                        if (data.response == "subscriber_created") {
-                          ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
-                        }
-                      },
-                    }
-                  };
-                </script>
-
-                <script data-maitre src="https://maitreapp.co/widget.js" async></script>
-
-                <!-- END MAITRE SCRIPT -->
 
               </div>
             </div>
@@ -594,10 +590,7 @@
     <div class="table-center">
       <div class="table-wrapper">
         <div class="gradient-text">
-          <h2>Click here to join our waitlist</h2>
-          <button type="button" class="gradient-button pulse"></button>
-          <div class="section-gradient-text">
-            <p>We're working hard to make Status available to everyone. Join our private wait list for early access.<br />We respect privacy.</p>
+        
           </div>
         </div>
 
