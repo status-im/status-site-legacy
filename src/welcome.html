@@ -99,16 +99,16 @@
               <p>You'll be notifed when Status is ready to launch.<br /> Help us spread the word by inviting your friends! The more friends you invite, the sooner you'll get access: </p>
           
                <div class="footer-icons-social">
-                <a href="mailto:?&subject=Ethereum Mobile Client&body=Hey,%20I%20just%20signed%20up%20to%20Status%20-%20it's%20mobile%20client%20built%20on%20Ethereum,%20check%20it%20out!%20https%3A//status.im/invite/MAITRE_CODE" class="footer-icon icon-email" target="_blank"></a>
+                <a id="emailLink" href="#" class="footer-icon icon-email" target="_blank"></a>
 
-                <a href="https://twitter.com/home?status=I%20just%20signed%20up%20to%20%40ethstatus%20-%20an%20%23ethereum%20%23dapps%20browser%20for%20mobile%3A%20https%3A//status.im/invite/MAITRE_CODE" target="_blank" class="footer-icon icon-twitter"></a>
+                <a id="twitterLink" href="#" target="_blank" class="footer-icon icon-twitter"></a>
 
-                <a href="http://www.facebook.com/sharer.php?u=https%3A//status.im/invite/MAITRE_CODE" class="footer-icon icon-facebook"></a>
+                <a id="facebookLink" href="#" class="footer-icon icon-facebook"></a>
               </div>
 
                <p>Or share your unique link:</p><br/>
                <div class="status-email" style="width:314px;margin:auto">
-               <input type="email" value="https://status.im/invite/MAITRE_CODE" >
+               <input id="shareLinkInput" type="email" value="" >
               <div class="email">
 
             </div>
@@ -116,6 +116,18 @@
 
               </div>
             </div>
+            <script>
+            var maitreCode = getParameterByName('maitre_code'); // Referral Code
+            var maitrePosition = getParameterByName('maitre_position'); // Waitlist Position
+            var email = "mailto:?&subject=Ethereum Mobile Client&body=Hey,%20I%20just%20signed%20up%20to%20Status%20-%20it's%20mobile%20client%20built%20on%20Ethereum,%20check%20it%20out!%20https%3A//status.im/invite/" + maitreCode;
+            var twitter = "https://twitter.com/home?status=I%20just%20signed%20up%20to%20%40ethstatus%20-%20an%20%23ethereum%20%23dapps%20browser%20for%20mobile%3A%20https%3A//status.im/invite/" + maitreCode;
+            var facebook = "http://www.facebook.com/sharer.php?u=https%3A//status.im/invite/" + maitreCode;
+            var input = "https://status.im/invite/" + maitreCode;
+            document.getElementById("emailLink").href = email;
+            document.getElementById("twitterLink").href = twitter;
+            document.getElementById("facebookLink").href = facebook;
+            document.getElementById("shareLinkInput").value = input;
+            </script>
           </div>
         </div>
         <div class="table-right table-bottom">

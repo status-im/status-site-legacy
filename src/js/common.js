@@ -88,7 +88,7 @@ $(function() {
     fade: {
       crossFade: true
     }
-});
+  });
   var swiper2 = new Swiper('.swiper2', {
     loop: true,
     autoplay: 2000,
@@ -108,6 +108,20 @@ $(function() {
     setTimeout(function(){
       $('#maitre-field-email input').focus();
     },1000);
-});
+  });
+  var shareLinkInput = $("#shareLinkInput");
+  
+  shareLinkInput.click(function(test) {
+    shareLinkInput.focus();
+    shareLinkInput[0].setSelectionRange(0, shareLinkInput.val().length);
+    try {
+      succeeded = document.execCommand('copy');
+    } catch (err) {
+      succeeded = false;
+    }
+    if (!succeeded) {
+      // Browser doesn't support execCommand
+    }
+  });
 
 });
