@@ -113,8 +113,6 @@ $(function() {
   
   shareLinkInput.click(function(test) {
     shareLinkInput.focus();
-    console.log(shareLinkInput);
-    console.log(test);
     shareLinkInput[0].setSelectionRange(0, shareLinkInput.val().length);
     try {
       succeeded = document.execCommand('copy');
