@@ -100,11 +100,16 @@
                       },
 
                       afterSuccess: function(data, form) {
+                        console.log(data);
                         jQuery(".status-text").removeClass('shown');
                         jQuery("#maitre-verification").html(
                           "Remember to confirm your email to be added to the signup queue. <br /> Improve your position by referring your friends and spreading the word.");
+
+                        var emailLink = "mailto:?&subject=Ethereum Mobile Client&body=Hey,%20I%20just%20signed%20up%20to%20Status%20-%20it's%20mobile%20client%20built%20on%20Ethereum,%20check%20it%20out!%20https%3A//status.im/invite/" + data.code;
+                        var twitterLink = "https://twitter.com/home?status=I%20just%20signed%20up%20to%20%40ethstatus%20-%20an%20%23ethereum%20%23dapps%20browser%20for%20mobile%3A%20https%3A//status.im/invite/" + data.code;
+                        var facebookLink = "http://www.facebook.com/sharer.php?u=https%3A//status.im/invite/" + data.code;
                         jQuery("#maitre-share-container").html(
-                          '<div class="footer-icons-social"><a href="#" class="footer-icon icon-email"></a><a href="#" class="footer-icon icon-twitter"></a><a href="#" class="footer-icon icon-facebook"></a></div>');
+                          '<div class="footer-icons-social"><a href="' + emailLink + '" class="footer-icon icon-email"></a><a href="' + twitterLink + '" class="footer-icon icon-twitter"></a><a href="' + facebookLink + '" class="footer-icon icon-facebook"></a></div>');
                         var behindNumberElement = jQuery("#maitre-people-behind-number");
                         var behindNumber = behindNumberElement.html();
                         if (behindNumber == "") {

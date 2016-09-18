@@ -8,7 +8,7 @@ if ( $_SERVER['HTTP_X_GITHUB_EVENT'] == 'push' ) {
     if( ($fp = popen($command, "r")) ) {
         while( !feof($fp) ){
             $result = fread($fp, 1024);
-            file_put_contents("build.log", $result, FILE_APPEND);
+            file_put_contents("/var/www/status-site/build.log", $result, FILE_APPEND);
             echo $result;
             flush();
         }
