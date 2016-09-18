@@ -101,26 +101,29 @@
 
                       afterSuccess: function(data, form) {
 
-                        jQuery("#maitre-share-plain-url").on('click', function () {
-                          var link = document.createRange();
-                          link.selectNode(this);
-                          document.getSelection().addRange(link);
-                          var copied = document.execCommand('copy');
-                          var text = this.innerHTML;
-                          if(copied) {
-                            var copytext = 'Copied to clipboard';
-                            jQuery("#maitre-share-plain-url").html(copytext);
-                            setTimeout(function(){
-                              jQuery("#maitre-share-plain-url").html(text);
-                            },1000)
-                          }
-                        })
                         if (data.response == "subscriber_created") {
+
                           jQuery(".status-text").removeClass('shown');
                           jQuery("#maitre-verification").html(
                             "Remember to confirm your email to be added to the signup queue. <br /> Improve your position by referring your friends and spreading the word.");
                           jQuery("#maitre-people-behind-number").html("0");
                           jQuery(".gradient-text").empty();
+
+                          jQuery("#maitre-share-plain-url").on('click', function () {
+                            var link = document.createRange();
+                            link.selectNode(this);
+                            document.getSelection().addRange(link);
+                            var copied = document.execCommand('copy');
+                            var text = this.innerHTML;
+                            if(copied) {
+                              var copytext = 'Copied to clipboard';
+                              jQuery("#maitre-share-plain-url").html(copytext);
+                              setTimeout(function(){
+                                jQuery("#maitre-share-plain-url").html(text);
+                              },1000)
+                            }
+                          });
+
                           ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
                         }
                       },
