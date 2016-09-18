@@ -1316,10 +1316,8 @@ a.maitre-widget-social {
     font-weight: 400;
     font-size: 1.1em; }
   #maitre-content p[data-maitre-instructions] {
-    margin-top: 20px;
-    color: #999;
-    font-weight: 300;
-    font-size: 1em; }
+    margin-top: 12px;
+    color: #808591; }
   #maitre-content div[data-maitre-share-container] {
     padding-top: 50px; }
 

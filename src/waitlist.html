@@ -100,6 +100,9 @@
                       },
 
                       afterSuccess: function(data, form) {
+                        console.log(data);
+
+                        jQuery("#maitre-people-behind-number").html("0");
 
                         jQuery("#maitre-share-plain-url").on('click', function () {
                           var link = document.createRange();
@@ -117,15 +120,20 @@
                         });
 
                         if (data.response == "subscriber_created") {
-
                           jQuery(".status-text").removeClass('shown');
                           jQuery("#maitre-verification").html(
                             "Remember to confirm your email to be added to the signup queue. <br /> Improve your position by referring your friends and spreading the word.");
-                          jQuery("#maitre-people-behind-number").html("0");
-                          jQuery("#maitre-share-plain-url").html("https://status.im/invite/" + data.code)
+                          jQuery("#maitre-share-plain-url").html("https://status.im/invite/" + data.code);
                           jQuery(".gradient-text").empty();
 
                           ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
+                        }
+
+                        if (data.response == "subscriber_retrieved") {
+                          jQuery(".status-text").removeClass('shown');
+                          jQuery("#maitre-header").html("You're already on the Waitlist!");
+                          jQuery("#maitre-instructions").html("You'll be notifed when Status is ready to launch.<br> Your position on the waitlist is shown below. Get access sooner by spreading the word!");
+                          jQuery("#maitre-share-plain-url").html("https://status.im/invite/" + data.code);
                         }
                       },
                     }
