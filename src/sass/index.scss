@@ -1259,7 +1259,7 @@ footer {
     margin-bottom: 20px;
     padding: 15px;
     padding-right: 45px;
-    width: 240px;
+    width: 270px;
     height: 46px;
     border: 0;
     border-radius: 8px;
@@ -1269,7 +1269,7 @@ footer {
   button {
     position: absolute;
     top: -60px;
-    right: 66px;
+    right: 56px;
     display: block;
     width: 34px;
     height: 34px;
@@ -1283,7 +1283,7 @@ footer {
     text-indent: -10000px;
     cursor: pointer;
     @media (max-width: 320px) {
-      right: 46px;
+      right: 36px;
     }
   }
   div[data-maitre-content] {
