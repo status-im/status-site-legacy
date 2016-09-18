@@ -103,9 +103,24 @@
                         jQuery(".status-text").removeClass('shown');
                         jQuery("#maitre-verification").html(
                           "Remember to confirm your email to be added to the signup queue. <br /> Improve your position by referring your friends and spreading the word.");
-                        jQuery("#maitre-share-container").html(
-                          '<div class="footer-icons-social"><a href="#" class="footer-icon icon-email"></a><a href="#" class="footer-icon icon-twitter"></a><a href="#" class="footer-icon icon-facebook"></a></div>');
+                        jQuery("#maitre-people-behind-number").html("0");
+
                         jQuery(".gradient-text").empty();
+
+                        jQuery("#maitre-share-plain-url").on('click', function () {
+                          var link = document.createRange();
+                          link.selectNode(this);
+                          document.getSelection().addRange(link);
+                          var copied = document.execCommand('copy');
+                          var text = this.innerHTML;
+                          if(copied) {
+                            var copytext = 'Copied to clipboard';
+                            jQuery("#maitre-share-plain-url").html(copytext);
+                            setTimeout(function(){
+                              jQuery("#maitre-share-plain-url").html(text);
+                            },1000)
+                          }
+                        })
                         if (data.response == "subscriber_created") {
                           ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
                         }
@@ -616,7 +631,7 @@
             <br>Kemperplatz 1 Berlin, Germany
             <br> support@status.im</p>
           <div class="footer-icons-social">
-            <a href="https://github.com/status-im" class="footer-icon icon-email"></a>
+            <a href="https://github.com/status-im" class="footer-icon icon-github"></a>
             <a href="https://twitter.com/ethstatus" class="footer-icon icon-twitter"></a>
             <a href="https://www.facebook.com/ethstatus" class="footer-icon icon-facebook"></a>
           </div>

@@ -946,14 +946,14 @@ footer {
 .icon-github {
   background-image: url("../img/icon-github.svg"); }
 
-.icon-email {
-  background-image: url("../img/icon-email.svg"); }
-
 .icon-twitter {
   background-image: url("../img/icon-twitter.svg"); }
 
 .icon-facebook {
   background-image: url("../img/icon-fb.svg"); }
+
+.icon-email {
+  background-image: url("../img/icon-email.svg"); }
 
 .footer-logo {
   display: block;
@@ -1274,8 +1274,6 @@ a.maitre-widget-social {
   position: relative;
   margin-top: -120px;
   width: 440px; }
-  #maitre-content div[data-maitre-share-plain] {
-    display: none !important; }
   #maitre-content h2 {
     margin: 0 0 10px;
     font-size: 22px; }
@@ -1286,7 +1284,7 @@ a.maitre-widget-social {
       font-weight: 500; }
   #maitre-content h4[data-maitre-people-ahead-number] {
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: 20%;
     margin: 0;
     color: #7099e6;
@@ -1294,14 +1292,14 @@ a.maitre-widget-social {
     font-size: 2.5em; }
   #maitre-content p[data-maitre-people-ahead-text] {
     position: absolute;
-    top: 63%;
+    top: 60%;
     left: 14%;
     color: #7099e6;
     font-weight: 400;
     font-size: 1.1em; }
   #maitre-content h4[data-maitre-people-behind-number] {
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: 59%;
     margin: 0;
     color: #a784db;
@@ -1309,7 +1307,7 @@ a.maitre-widget-social {
     font-size: 2.5em; }
   #maitre-content p[data-maitre-people-behind-text] {
     position: absolute;
-    top: 63%;
+    top: 60%;
     left: 55%;
     color: #a784db;
     font-weight: 400;
@@ -1321,6 +1319,47 @@ a.maitre-widget-social {
     font-size: 1em; }
   #maitre-content div[data-maitre-share-container] {
     padding-top: 50px; }
+
+#maitre-share-container {
+  position: relative;
+  top: 50px; }
+  #maitre-share-container a.maitre-widget-social {
+    display: inline-block;
+    margin-right: 20px !important;
+    width: 30px !important;
+    height: 30px !important;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #9A9EA7;
+    background-position: center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    -webkit-transition: background-color .1s linear;
+    transition: background-color .1s linear; }
+    #maitre-share-container a.maitre-widget-social:hover {
+      background-color: #2ba6e9; }
+  #maitre-share-container #maitre-share-plain-url {
+    margin: 20px auto;
+    padding: 10px;
+    width: 320px;
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
+    background-color: #fff; }
+  #maitre-share-container #maitre-social-plain {
+    display: none !important; }
+  #maitre-share-container #maitre-social-email {
+    margin-right: 0 !important; }
+  #maitre-share-container #maitre-share-plain-explanation {
+    color: #808591;
+    font-size: 14px; }
+  #maitre-share-container #maitre-social-facebook {
+    background-image: url("../img/icon-fb.svg"); }
+  #maitre-share-container #maitre-social-twitter {
+    background-image: url("../img/icon-twitter.svg"); }
+  #maitre-share-container #maitre-social-email {
+    background-image: url("../img/icon-email.svg"); }
+  #maitre-share-container #maitre-social-whatsapp {
+    display: none !important; }
 
 .gradient-text #maitre-content h4[data-maitre-people-behind-number],
 .gradient-text #maitre-content p[data-maitre-people-behind-text] {
@@ -1984,19 +2023,19 @@ body input:required:valid, body textarea:required:valid {
     padding: 15px;
     width: 360px; }
     #maitre-content h4[data-maitre-people-ahead-number] {
-      top: 55%;
+      top: 50%;
       left: 17%;
       font-size: 2em; }
     #maitre-content p[data-maitre-people-ahead-text] {
-      top: 70%;
+      top: 60%;
       left: 7%;
       font-size: 1em; }
     #maitre-content h4[data-maitre-people-behind-number] {
-      top: 55%;
+      top: 50%;
       left: 66%;
       font-size: 2em; }
     #maitre-content p[data-maitre-people-behind-text] {
-      top: 70%;
+      top: 60%;
       left: 57%;
       font-size: 1em; }
     #maitre-content div[data-maitre-share-container] {
@@ -2038,7 +2077,9 @@ body input:required:valid, body textarea:required:valid {
       font-weight: normal; }
   #maitre-content {
     padding: 15px;
-    width: 320px; } }
+    width: 320px; }
+  #maitre-share-container #maitre-share-plain-url {
+    width: 280px; } }
 
 /*==========  Mobile First Method  ========== */
 /* Custom, iPhone Retina */

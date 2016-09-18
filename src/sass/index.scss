@@ -979,6 +979,10 @@ footer {
   background-image: url('../img/icon-fb.svg');
 }
 
+.icon-email {
+  background-image: url('../img/icon-email.svg');
+}
+
 .footer-logo {
   display: block;
   margin: 0 auto;
@@ -1304,9 +1308,9 @@ a.maitre-widget-social {
   position: relative;
   margin-top: -120px;
   width: 440px;
-  div[data-maitre-share-plain] {
-    display: none !important;
-  }
+  // div[data-maitre-share-plain] {
+  //   display: none !important;
+  // }
 
   h2 {
     margin: 0 0 10px;
@@ -1323,7 +1327,7 @@ a.maitre-widget-social {
 
   h4[data-maitre-people-ahead-number] {
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: 20%;
     margin: 0;
     color: #7099e6;
@@ -1333,7 +1337,7 @@ a.maitre-widget-social {
 
   p[data-maitre-people-ahead-text] {
     position: absolute;
-    top: 63%;
+    top: 60%;
     left: 14%;
     color: #7099e6;
     font-weight: 400;
@@ -1342,7 +1346,7 @@ a.maitre-widget-social {
 
   h4[data-maitre-people-behind-number] {
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: 59%;
     margin: 0;
     color: #a784db;
@@ -1352,7 +1356,7 @@ a.maitre-widget-social {
 
   p[data-maitre-people-behind-text] {
     position: absolute;
-    top: 63%;
+    top: 60%;
     left: 55%;
     color: #a784db;
     font-weight: 400;
@@ -1366,6 +1370,56 @@ a.maitre-widget-social {
   }
   div[data-maitre-share-container] {
     padding-top: 50px;
+  }
+}
+
+#maitre-share-container {
+  position: relative;
+  top: 50px;
+  a.maitre-widget-social {
+    display: inline-block;
+    margin-right: 20px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    background-color: #9A9EA7;
+    background-position: center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    transition: background-color .1s linear;
+    &:hover {
+      background-color: #2ba6e9;
+
+    }
+  }
+  #maitre-share-plain-url {
+    margin: 20px auto;
+    padding: 10px;
+    width: 320px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  #maitre-social-plain {
+    display: none !important;
+  }
+  #maitre-social-email {
+    margin-right: 0 !important;
+  }
+  #maitre-share-plain-explanation {
+    color: #808591;
+    font-size: 14px;
+  }
+  #maitre-social-facebook {
+    background-image: url('../img/icon-fb.svg');
+  }
+  #maitre-social-twitter {
+    background-image: url('../img/icon-twitter.svg');
+  }
+  #maitre-social-email {
+    background-image: url('../img/icon-email.svg');
+  }
+  #maitre-social-whatsapp {
+    display: none !important;
   }
 }
 

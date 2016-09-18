@@ -160,22 +160,22 @@
     padding: 15px;
     width: 360px;
     h4[data-maitre-people-ahead-number] {
-      top: 55%;
+      top: 50%;
       left: 17%;
       font-size: 2em;
     }
     p[data-maitre-people-ahead-text] {
-      top: 70%;
+      top: 60%;
       left: 7%;
       font-size: 1em;
     }
     h4[data-maitre-people-behind-number] {
-      top: 55%;
+      top: 50%;
       left: 66%;
       font-size: 2em;
     }
     p[data-maitre-people-behind-text] {
-      top: 70%;
+      top: 60%;
       left: 57%;
       font-size: 1em;
     }
@@ -235,6 +235,9 @@
   #maitre-content {
     padding: 15px;
     width: 320px;
+  }
+  #maitre-share-container #maitre-share-plain-url {
+    width: 280px;
   }
 }
 
