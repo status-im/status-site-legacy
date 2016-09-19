@@ -6,7 +6,7 @@
   <meta charset="utf-8">
 
   <title>Status | Mobile Ethereum Client</title>
-  <meta name="description" content="The mobile light-client">
+  <meta name="description" content="Status is a mobile DApp browser and messenger for Ethereum. Join us in making Ethereum part of our everyday lives and interactions.">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,7 +134,7 @@
                         if (data.response == "subscriber_created") {
                           jQuery(".status-text").removeClass('shown');
                           jQuery("#maitre-verification").html(
-                            "Remember to confirm your email to be added to the signup queue. <br /> Improve your position by referring your friends and spreading the word.");
+                            "Remember to confirm your email to be added to the signup queue. Invite your friends to get early access to our beta release, and help us raise awareness:");
                           jQuery("#maitre-share-plain-url").html("https://status.im/invite/" + data.code);
                           jQuery(".gradient-text").empty();
 
@@ -144,7 +144,7 @@
                         if (data.response == "subscriber_retrieved") {
                           jQuery(".status-text").removeClass('shown');
                           jQuery("#maitre-header").html("You're already on the Waitlist!");
-                          jQuery("#maitre-instructions").html("You'll be notifed when Status is ready to launch.<br> Your position on the waitlist is shown below. Get access sooner by spreading the word!");
+                          jQuery("#maitre-instructions").html("You'll be notifed when Status is ready to launch.<br> Your position on the waitlist is below. Get access sooner by spreading the word!");
                           jQuery("#maitre-share-plain-url").html("https://status.im/invite/" + data.code);
                         }
                       },
