@@ -119,9 +119,13 @@ $(function() {
     } catch (err) {
       succeeded = false;
     }
-    if (!succeeded) {
-      // Browser doesn't support execCommand
+    if (succeeded) {
+      var text = shareLinkInput.val();
+      var copytext = 'Copied to clipboard';
+      shareLinkInput.val(copytext);
+      setTimeout(function() {
+        shareLinkInput.val(text);
+      }, 500);
     }
   });
-
 });

@@ -177,7 +177,7 @@ p {
   }
 }
 
-input[type=email] {
+input[type=email], input.input-email {
   padding: 15px;
   padding-right: 45px;
   width: 100%;
@@ -186,6 +186,10 @@ input[type=email] {
   border-radius: 8px;
   background-color: #fff;
   font-size: 14px;
+}
+
+input.input-email {
+  text-align: center;
 }
 
 .email {
