@@ -1345,7 +1345,7 @@ a.maitre-widget-social {
 
   p[data-maitre-people-ahead-text] {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 14%;
     color: #7099e6;
     font-weight: 400;
@@ -1364,7 +1364,7 @@ a.maitre-widget-social {
 
   p[data-maitre-people-behind-text] {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 55%;
     color: #a784db;
     font-weight: 400;
@@ -1427,6 +1427,10 @@ a.maitre-widget-social {
   #maitre-social-whatsapp {
     display: none !important;
   }
+}
+
+#maitre-resend-email {
+  display: none !important;
 }
 
 .gradient-text {
