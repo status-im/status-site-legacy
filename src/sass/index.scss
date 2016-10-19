@@ -201,6 +201,10 @@ input.input-email {
 }
 
 .mc_email {
+  width: 360px;
+}
+
+.mc_email input[type=email] {
   width: 240px;
 }
 
@@ -220,6 +224,37 @@ input.input-email {
   background-repeat: no-repeat;
   text-indent: -10000px;
   cursor: pointer;
+}
+
+#mc-embedded-subscribe-form .email-button {
+  right: 66px;
+}
+
+#mc-embedded-subscribe-form .new-button {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  padding: 15px 10px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #68c0f8;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+#mc-embedded-subscribe-form .new-input {
+  float: left;
+  margin-left: 15px;
+  padding: 15px;
+  width: 190px;
+}
+
+.mc-field-group {
+  overflow: hidden;
 }
 
 button.gradient-button {
@@ -1476,4 +1511,16 @@ a.maitre-widget-social {
 
 .popup.medium {
   max-width: 600px;
+}
+
+.footer-icons-social iframe {
+  margin-right: 5px;
+}
+
+// Mailchimp styles
+
+div.mce_inline_error, #mce-error-response {
+  clear: both;
+  padding-top: 10px;
+  color: #e85c41;
 }

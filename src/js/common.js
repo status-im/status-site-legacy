@@ -27,12 +27,19 @@ $(function() {
         $(".main-header").addClass("shown");
     },1000);
 
-    $(".email-button").on('click', function(){
-      $(".email").addClass("shaky");
+    // $(".email-button").on('click', function(){
+    //   $(".email").addClass("shaky");
+    //   setTimeout(function() {
+    //       $(".email").removeClass("shaky");
+    //   },800);
+    //  });
+
+    $(".mc-field-group input").on('focus', function() {
+      $(".email").addClass("focused");
       setTimeout(function() {
-          $(".email").removeClass("shaky");
-      },800);
-     });
+        $(".email").removeClass("focused");
+      }, 400);
+    });
 
   $('.block').waypoint(function() {
       $('.block-blue').addClass('shown');
@@ -107,10 +114,11 @@ $(function() {
     }, 1000);
     setTimeout(function(){
       $('#maitre-field-email input').focus();
+      $('.mc-field-group input').focus();
     },1000);
   });
   var shareLinkInput = $("#shareLinkInput");
-  
+
   shareLinkInput.click(function(test) {
     shareLinkInput.focus();
     shareLinkInput[0].setSelectionRange(0, shareLinkInput.val().length);

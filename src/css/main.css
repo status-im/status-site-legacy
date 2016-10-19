@@ -214,6 +214,9 @@ input.input-email {
   height: auto; }
 
 .mc_email {
+  width: 360px; }
+
+.mc_email input[type=email] {
   width: 240px; }
 
 .email-button {
@@ -233,6 +236,33 @@ input.input-email {
   background-repeat: no-repeat;
   text-indent: -10000px;
   cursor: pointer; }
+
+#mc-embedded-subscribe-form .email-button {
+  right: 66px; }
+
+#mc-embedded-subscribe-form .new-button {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  padding: 15px 10px;
+  border: 0;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #68c0f8;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer; }
+  #mc-embedded-subscribe-form .new-button:hover {
+    opacity: .8; }
+
+#mc-embedded-subscribe-form .new-input {
+  float: left;
+  margin-left: 15px;
+  padding: 15px;
+  width: 190px; }
+
+.mc-field-group {
+  overflow: hidden; }
 
 button.gradient-button {
   display: block;
@@ -1401,6 +1431,14 @@ a.maitre-widget-social {
 .popup.medium {
   max-width: 600px; }
 
+.footer-icons-social iframe {
+  margin-right: 5px; }
+
+div.mce_inline_error, #mce-error-response {
+  clear: both;
+  padding-top: 10px;
+  color: #e85c41; }
+
 /* Import Libs SASS/CSS */
 /**
  * Swiper 3.3.1
@@ -2086,7 +2124,12 @@ body input:required:valid, body textarea:required:valid {
     padding: 15px;
     width: 320px; }
   #maitre-share-container #maitre-share-plain-url {
-    width: 280px; } }
+    width: 280px; }
+  #mc-embedded-subscribe-form .new-input {
+    margin-left: 5px;
+    padding: 15px; }
+  #mc-embedded-subscribe-form .new-button {
+    right: 50px; } }
 
 /*==========  Mobile First Method  ========== */
 /* Custom, iPhone Retina */

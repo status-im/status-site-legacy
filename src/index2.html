@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
 
-  <title>Status | The Mobile Ethereum Client</title>
+  <title>Status | A Mobile Ethereum Client</title>
   <meta name="description" content="Status is a mobile DApp browser and messenger for Ethereum. Join us in making Ethereum part of our everyday lives and interactions.">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +21,7 @@
         src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
       </script>
     <![endif]-->
+
   <script src="https://cdn.optimizely.com/js/7577170144.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:500,300,400" rel="stylesheet" type="text/css">
   <script>
@@ -40,30 +41,25 @@
   </script>
 
   <script type="text/javascript">
-    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+    window.heap = window.heap || [], heap.load = function(e, t) {
+      window.heap.appid = e, window.heap.config = t = t || {};
+      var r = t.forceSSL || "https:" === document.location.protocol,
+        a = document.createElement("script");
+      a.type = "text/javascript", a.async = !0, a.src = (r ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap-" + e + ".js";
+      var n = document.getElementsByTagName("script")[0];
+      n.parentNode.insertBefore(a, n);
+      for (var o = function(e) {
+          return function() {
+            heap.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+          }
+        }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++) heap[p[c]] = o(p[c])
+    };
     heap.load("1816593697");
   </script>
-
 
   <!-- build:css css/main.min.css -->
   <link rel="stylesheet" href="css/main.css">
   <!-- endbuild -->
-
-  <script>
-      function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-        var foo = getParameterByName('maitre_code'); // Referral Code
-        var foo = getParameterByName('maitre_position'); // Waitlist Position
-
-  </script>
 
 </head>
 
@@ -83,68 +79,41 @@
           <div class="main-navigation">
             <nav>
               <ul>
-                <li><a href="https://status-platform.workable.com/">Jobs</a></li>
-                <li><a href="#features">Features</a></li>
+
+                <li><a href="https://blog.status.im">Blog</a></li>
+                <li><a href="https://status.im/#features">Features</a></li>
                 <li><a href="http://slack.status.im/">Slack</a></li>
 
               </ul>
             </nav>
           </div>
-
-
-          <script>window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-              t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-
-            t._e = [];
-            t.ready = function(f) {
-              t._e.push(f);
-            };
-
-            return t;
-          }(document, "script", "twitter-wjs"));</script>
-
         </header>
         <div class="table-left">
           <div class="status">
             <div class="status-text">
-              <h1>You've been added to the Waitlist.<br/>Could you help us spread the word?</h1>
-
-              <p>Please help support our open source project with a tweet, or follow us to stay updated on our progress:</p>
-               <div class="footer-icons-social">
-
-              <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false" data-text="Check out Status (@ethstatus) - an open source project that will bring Ethereum to Android and iOS!" data-size="large">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-               <a href="https://twitter.com/ethstatus" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @ethstatus</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-              </div>
-
-
-              <div class="status-email" style="width:314px;margin:auto">
-              <div class="email">
-
+              <h1>Status, more than a mobile wallet.</h1>
+              <p>Status is a browser, messenger, and gateway to the decentralised world of Ethereum.</p>
             </div>
-
-
+            <div class="status-email">
+              <div class="email mc_email">
+                <div class="mc_embed_signup">
+                <form action="//status.us13.list-manage.com/subscribe/post?u=d0c1a0be2adff281b52e27a7f&amp;id=09e2d9ae07" method="post" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div class="mc_embed_signup_scroll">
+                  <div class="mc-field-group">
+                  <input type="email" value="" name="EMAIL" class="required email-input mce-EMAIL" placeholder="Enter your email for updates">
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d0c1a0be2adff281b52e27a7f_09e2d9ae07" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="" name="subscribe" class="mc-embedded-subscribe button email-button"></div>
+                </div>
+                  <!-- <div class="email-button"></div> -->
+                </form>
+              </div>
               </div>
             </div>
-            <script>
-            var maitreCode = getParameterByName('maitre_code'); // Referral Code
-            var maitrePosition = getParameterByName('maitre_position'); // Waitlist Position
-            var email = "mailto:?&subject=Ethereum Mobile Client&body=Hey,%20I%20just%20signed%20up%20to%20Status%20-%20it's%20mobile%20client%20built%20on%20Ethereum,%20check%20it%20out!%20https%3A//status.im/invite/" + maitreCode;
-            var twitter = "https://twitter.com/home?status=I%20just%20signed%20up%20to%20%40ethstatus%20-%20an%20%23ethereum%20%23dapps%20browser%20for%20mobile%3A%20https%3A//status.im/invite/" + maitreCode;
-            var facebook = "http://www.facebook.com/sharer.php?u=https%3A//status.im/invite/" + maitreCode;
-            var input = "https://status.im/invite/" + maitreCode;
-            document.getElementById("emailLink").href = email;
-            document.getElementById("twitterLink").href = twitter;
-            document.getElementById("facebookLink").href = facebook;
-            document.getElementById("shareLinkInput").value = input;
-            </script>
           </div>
         </div>
         <div class="table-right table-bottom">
@@ -619,7 +588,10 @@
     <div class="table-center">
       <div class="table-wrapper">
         <div class="gradient-text">
-
+          <h2>Click here to join our waitlist</h2>
+          <button type="button" class="gradient-button pulse"></button>
+          <div class="section-gradient-text">
+            <p>We're working hard to make Status available to everyone. Join our private wait list for early access.<br />We respect privacy.</p>
           </div>
         </div>
 
@@ -634,10 +606,10 @@
       <div class="footer-wrapper">
         <div class="footer-half">
           <a class="footer-logo-mobile"></a>
-          <p>Status Holdings Pte. Ltd.
-                        <br>6 Ubi Road
-                         Singapore
-                        <br> support@status.im</p>
+            <p>Status Holdings Pte. Ltd.
+            <br>6 Ubi Road
+              Singapore
+            <br><a style="color:inherit;text-decoration:none;" href="mailto:support@status.im">support@status.im</a></p>
           <div class="footer-icons-social">
             <a href="https://github.com/status-im" class="footer-icon icon-github"></a>
             <a href="https://twitter.com/ethstatus" class="footer-icon icon-twitter"></a>
@@ -658,13 +630,19 @@
   </footer>
 
   <script>
-    ga('send', 'event', 'Waitlist', 'Confirmed', 'Waitlist');
+    ga('send', 'pageview');
   </script>
-
   <!-- build:js js/main.min.js -->
   <script type="text/javascript" src="js/libs.min.js"></script>
   <script type="text/javascript" src="js/common.js"></script>
   <!-- endbuild -->
+
+  <!-- Mailchimp (again) -->
+
+  <script type="text/javascript" src="js/mc-validate.js"></script>
+  <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  <!--End mc_embed_signup-->
+
   <!-- Twitter single-event website tag code -->
   <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
   <script type="text/javascript">twttr.conversion.trackPid('nvjfv', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
@@ -673,7 +651,6 @@
   <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nvjfv&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
   </noscript>
   <!-- End Twitter single-event website tag code -->
-
 </body>
 
 </html>
