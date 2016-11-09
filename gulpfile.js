@@ -76,7 +76,12 @@ gulp.task('demo', function() {
     .pipe(gulp.dest('build/demo'))
 });
 
-gulp.task('build', ['clean', 'styles', 'scripts', 'images', 'demo'], function() {
+gulp.task('dapps', function() {
+  gulp.src(['src/dapps/**/*'])
+    .pipe(gulp.dest('build/dapps'))
+});
+
+gulp.task('build', ['clean', 'styles', 'scripts', 'images', 'demo', 'dapps'], function() {
 
   gulp.src([
     'src/css/main.css'
