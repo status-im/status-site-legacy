@@ -62,12 +62,12 @@ gulp.task('clean', function() {
 gulp.task('images', function() {
   return gulp.src('src/img/**/*')
     .pipe(plumber())
-    .pipe(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()]
-    }))
+    // .pipe(imagemin({
+    //   interlaced: true,
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}],
+    //   use: [pngquant()]
+    // }))
     .pipe(gulp.dest('build/img'));
 });
 
