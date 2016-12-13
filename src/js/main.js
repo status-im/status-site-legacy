@@ -1,5 +1,5 @@
 let ScrollOver = require("./lib/ScrollOver.js")
-let animateScroll = require("./lib/animateScroll.js")
+let animateScroll = require("./lib/animatescroll.js")
 
 let body = document.querySelectorAll("body")[0]
 let tagline = document.querySelectorAll(".tagline")[0]
