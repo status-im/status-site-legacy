@@ -155,7 +155,7 @@ select[multiple] {
 
 body {
   background-color: #eef2f5;
-  font-family: 'PostGrotesk-Book', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "PostGrotesk-Book", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
@@ -173,7 +173,7 @@ a {
   height: 44px;
   line-height: 43px;
   padding: 0 20px;
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   text-align: center;
@@ -196,6 +196,18 @@ a {
 .button.button--disabled {
   color: rgba(255, 255, 255, 0.5);
   cursor: default; }
+
+.header-wrap {
+  margin: 30px 0 0 0;
+  width: 1080px;
+  height: 130px;
+  background-color: #4957B8;
+  background-image: url(../img/new-site/dot.svg);
+  box-shadow: 0px 10px 14px 0px rgba(79, 90, 166, 0.35);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: translate3d(0, 0, 0);
+  transition: transform .6s ease, opacity .3s ease; }
 
 .header {
   position: absolute;
@@ -244,7 +256,7 @@ a.logo {
 
 .logo__title {
   display: block;
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 22px;
   line-height: 25px;
   color: white; }
@@ -257,7 +269,7 @@ a.logo {
   opacity: .5; }
 
 .nav a {
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 15px;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +351,10 @@ li.social-link a {
     width: 100%;
     margin: 40px;
     -ms-flex-align: center;
-    align-items: center; } }
+    align-items: center; }
+  .header-wrap {
+    margin: 0 0 0 0;
+    width: 100%; } }
 
 @media (max-width: 960px) {
   .nav {
@@ -357,6 +372,9 @@ li.social-link a {
     margin: 20px 20px 20px 17px;
     -ms-flex-align: start;
     align-items: flex-start; }
+  .header-wrap {
+    height: 82px;
+    border-radius: 0; }
   .logo__icon {
     height: 48px;
     width: 48px;
@@ -585,6 +603,127 @@ li.social-link a {
     line-height: 22px;
     margin: 0 0 15px 0; } }
 
+.page {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.page__inner {
+  width: 1120px;
+  position: relative; }
+
+.page__content-wrap {
+  position: relative;
+  width: 1180px;
+  margin: 0 0 40px 0;
+  background: white;
+  box-shadow: 0px -2px 18px 0px rgba(72, 89, 102, 0.25);
+  border-radius: 10px; }
+
+.page__content {
+  padding: 40px;
+  background: white;
+  border-radius: 8px; }
+
+.page__content.page__content--success {
+  padding: 160px 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center; }
+
+.page__title {
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 20px 0; }
+
+.page__subheader {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 0 25px 0;
+  color: #92999f; }
+
+.page__content.page__content--success .page__title {
+  max-width: 500px; }
+
+.page__content.page__content--success .page__text {
+  max-width: 500px; }
+
+.page__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-transform: uppercase;
+  border-top: 1px solid #e9eaf4; }
+
+.page__footer .page__footer-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  transition: opacity .2s ease; }
+
+.page__footer .page__footer-link:hover {
+  opacity: .6; }
+
+@media (max-width: 1220px) {
+  .page__content-wrap {
+    width: 1080px;
+    top: -10px;
+    margin: 0 0 30px 0; } }
+
+@media (max-width: 1140px) {
+  .page {
+    margin: 20px 20px 0 20px; }
+  .page__content-wrap {
+    width: 100%; }
+  .page__content {
+    margin: 0 40px;
+    width: auto; } }
+
+@media (max-width: 840px) {
+  .page__content {
+    margin: 0 30px; }
+  .page__content-wrap {
+    top: -20px;
+    margin: 0 0 20px 0; }
+  .page__content.page__content--success {
+    padding: 100px 20px; } }
+
+@media (max-width: 767px) {
+  .page {
+    margin: 0; }
+  .page__content.page__content--success {
+    padding: 40px 0 80px 0; }
+  .page__content-wrap {
+    top: 0;
+    margin: 0; }
+  .page__title {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 10px 0; }
+  .page__subheader {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 15px 0; } }
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -688,7 +827,7 @@ li.social-link a {
   top: 260px; }
 
 .tagline .tagline__title {
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   color: white;
   font-size: 25px;
   line-height: 35px;
@@ -735,7 +874,7 @@ li.social-link a {
 
 .email-form a {
   color: white;
-  font-family: PostGrotesk-Medium; }
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
 
 .email-form__responces {
   color: rgba(255, 255, 255, 0.8);
@@ -922,7 +1061,7 @@ input.email-form__input--email:disabled {
   transform: translate3d(0, 0, 0); }
 
 .more-button {
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 15px;
   text-align: center;
@@ -965,7 +1104,7 @@ input.email-form__input--email:disabled {
   background-image: url(../img/new-site/buy_icon.png); }
 
 .features__title {
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 20px;
   margin: 15px 0 12px 0; }
@@ -1277,7 +1416,7 @@ input.email-form__input--email:disabled {
 .dapp__title {
   font-size: 15px;
   line-height: 15px;
-  font-family: PostGrotesk-Medium;
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   margin: 0 0 10px 0; }
 
 .dapp__description {

@@ -22,7 +22,7 @@
 }
 
 .tagline .tagline__title {
-  font-family:PostGrotesk-Medium;
+  font-family:$PostGroteskMedium;
   color: $colorWhite;
   font-size: 25px;
   line-height: 35px;
@@ -77,7 +77,7 @@
 
 .email-form a {
   color: rgba(255, 255, 255, 1);
-  font-family: PostGrotesk-Medium;
+  font-family: $PostGroteskMedium;
 }
 
 .email-form__responces {
@@ -296,7 +296,7 @@ input.email-form__input--email:disabled {
 }
 
 .more-button {
-  font-family:PostGrotesk-Medium;
+  font-family:$PostGroteskMedium;
   text-transform: uppercase;
   line-height: 15px;
   text-align: center;
@@ -347,7 +347,7 @@ input.email-form__input--email:disabled {
 }
 
 .features__title {
-  font-family:PostGrotesk-Medium;
+  font-family:$PostGroteskMedium;
   font-size: 17px;
   line-height: 20px;
   margin: 15px 0 12px 0;

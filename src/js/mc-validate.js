@@ -21,6 +21,7 @@
 
 // ADDITIONAL JQUERY VALIDATE METHODS
 (function($) {
+
 	// Validate a multifield birthday
 	$.validator.addMethod("mc_birthday", function(date, element, grouping_class) {
 		var isValid = false;
@@ -44,6 +45,7 @@
 		}
 		return isValid;
 	}, "Please enter a valid month and day.");
+
 	// Validate a multifield date
 	$.validator.addMethod("mc_date", function(date, element, grouping_class) {
 		var isValid = false;
@@ -394,3 +396,4 @@
 	};
 
 }(jQuery));
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
