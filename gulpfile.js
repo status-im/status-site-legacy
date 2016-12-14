@@ -53,7 +53,7 @@ gulp.task('clean', function() {
 gulp.task('images', function() {
   gulp.src('src/img/**/*')
       .pipe(plumber())
-      .pipe(imagemin())
+      //.pipe(imagemin())
       .pipe(gulp.dest('build/img'))
 })
 

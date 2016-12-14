@@ -201,7 +201,7 @@ a {
   margin: 30px 0 0 0;
   width: 1080px;
   height: 130px;
-  background-color: #4957B8;
+  background-color: #4957b8;
   background-image: url(../img/new-site/dot.svg);
   box-shadow: 0px 10px 14px 0px rgba(79, 90, 166, 0.35);
   border-top-left-radius: 10px;
@@ -373,7 +373,7 @@ li.social-link a {
     -ms-flex-align: start;
     align-items: flex-start; }
   .header-wrap {
-    height: 82px;
+    height: 92px;
     border-radius: 0; }
   .logo__icon {
     height: 48px;
@@ -624,7 +624,9 @@ li.social-link a {
   border-radius: 10px; }
 
 .page__content {
-  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 40px 100px;
   background: white;
   border-radius: 8px; }
 
@@ -649,6 +651,15 @@ li.social-link a {
   line-height: 26px;
   margin: 0 0 25px 0;
   color: #92999f; }
+
+.page__content p {
+  margin: 0 0 10px 0; }
+
+.page__content p a {
+  color: #4957b8; }
+
+.page__content p strong {
+  font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
 
 .page__content.page__content--success .page__title {
   max-width: 500px; }
@@ -695,12 +706,12 @@ li.social-link a {
   .page__content-wrap {
     width: 100%; }
   .page__content {
-    margin: 0 40px;
     width: auto; } }
 
 @media (max-width: 840px) {
   .page__content {
-    margin: 0 30px; }
+    margin: 0 30px;
+    padding: 50px 20px 100px; }
   .page__content-wrap {
     top: -20px;
     margin: 0 0 20px 0; }
@@ -710,10 +721,11 @@ li.social-link a {
 @media (max-width: 767px) {
   .page {
     margin: 0; }
-  .page__content.page__content--success {
+  .page__content.page__content--success,
+  .page__content {
     padding: 40px 0 80px 0; }
   .page__content-wrap {
-    top: 0;
+    top: -10px;
     margin: 0; }
   .page__title {
     font-size: 18px;

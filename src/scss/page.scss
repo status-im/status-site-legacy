@@ -19,7 +19,9 @@
 }
 
 .page__content {
-  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 40px 100px;
   background: rgba(255, 255, 255, 1);
   border-radius: 8px;
 }
@@ -31,6 +33,7 @@
   flex-direction: column;
   text-align: center;
 }
+
 
 .page__title {
   font-family:$PostGroteskMedium;
@@ -44,6 +47,18 @@
   line-height: 26px;
   margin: 0 0 25px 0;
   color: rgba(146, 153, 159, 1);
+}
+
+.page__content p {
+  margin: 0 0 10px 0;
+}
+
+.page__content p a {
+  color: rgba(73, 87, 184, 1);
+}
+
+.page__content p strong {
+  font-family: $PostGroteskMedium;
 }
 
 .page__content.page__content--success .page__title {
@@ -103,7 +118,6 @@
   }
 
   .page__content {
-    margin: 0 40px;
     width: auto;
   }
 
@@ -113,6 +127,7 @@
 
   .page__content {
     margin: 0 30px;
+    padding: 50px 20px 100px;
   }
 
   .page__content-wrap {
@@ -131,13 +146,13 @@
     margin: 0;
   }
 
-
-  .page__content.page__content--success {
+  .page__content.page__content--success,
+  .page__content {
     padding: 40px 0 80px 0;
   }
 
   .page__content-wrap {
-    top: 0;
+    top: -10px;
     margin: 0;
   }
 
