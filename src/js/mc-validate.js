@@ -323,15 +323,12 @@
 		groups: mc.getGroups(),
 
 		highlight: function(element, errorClass, validClass) {
-			shakeForm()
-			showErrorMessage()
+
   	},
 
 		// Place a field's inline error HTML
 		errorPlacement: function(error, element) {
-			$('.email-form__error-message').html(error);
 			enableInputs();
-			showErrorMessage();
     },
 
 		invalidHandler: function() {
@@ -342,6 +339,7 @@
 		showErrors: function(errorMap, errorList) {
 			var content = errorMap.EMAIL;
 			showErrorMessage(content);
+			shakeForm()
 		},
 
     // Submit the form via ajax (see: jQuery Form plugin)
