@@ -9780,7 +9780,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     });
 
     document.querySelectorAll(".button--scroll-top")[0].addEventListener('click', function (event) {
-      animateScroll(body, 1000, "easeInOutCubic", 0);
+      animateScroll(body, 600, "easeInOutCubic", 0);
+      setTimeout(function () {
+        document.querySelectorAll(".email-form__input--email")[0].focus();
+      }, 1000);
       event.preventDefault();
     });
 

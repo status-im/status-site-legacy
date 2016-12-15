@@ -143,21 +143,6 @@
 
 // MC
 (function($) {
-	var err_style = '';
-	try {
-	    err_style = mc_custom_error_style;
-	} catch(e){
-	    err_style = '#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }';
-	}
-	var head = document.getElementsByTagName('head')[0];
-	var style = document.createElement('style');
-	style.type = 'text/css';
-	if (style.styleSheet) {
-	  style.styleSheet.cssText = err_style;
-	} else {
-	  style.appendChild(document.createTextNode(err_style));
-	}
-	head.appendChild(style);
 
 	// Expose extra mc form methods in global var
 	window.mc = {
@@ -165,27 +150,30 @@
 			$('#mc_embed_signup a.mc_embed_close').show();
 		    setTimeout( function(){ $('#mc_embed_signup').fadeIn(); } , mc.delayPopup);
 		},
+
 		closePopup: function() {
-            $('#mc_embed_signup').hide();
-            var now = new Date();
-            var expires_date = new Date( now.getTime() + 31536000000 );
-            document.cookie = 'MCEvilPopupClosed=yes;expires=' + expires_date.toGMTString()+';path=/';
-        },
-        /**
+      $('#mc_embed_signup').hide();
+      var now = new Date();
+      var expires_date = new Date( now.getTime() + 31536000000 );
+      document.cookie = 'MCEvilPopupClosed=yes;expires=' + expires_date.toGMTString()+';path=/';
+    },
+
+		/**
 		 *	Figure out if we should show the popup (if they've closed it before, don't show it.)
-         */
-        evalPopup: function() {
-        	$('#mc_embed_signup').hide();
-		    cks = document.cookie.split(';');
-		    for(i=0; i<cks.length; i++){
-		        parts = cks[i].split('=');
-		        if (parts[0].indexOf('MCEvilPopupClosed') != -1) mc.showPopup = false;
-		    }
-		    if (mc.showPopup) mc.openPopup();
-        },
-        /**
+     */
+    evalPopup: function() {
+    	$('#mc_embed_signup').hide();
+	    cks = document.cookie.split(';');
+	    for(i=0; i<cks.length; i++){
+	        parts = cks[i].split('=');
+	        if (parts[0].indexOf('MCEvilPopupClosed') != -1) mc.showPopup = false;
+	    }
+	    if (mc.showPopup) mc.openPopup();
+    },
+
+		/**
 		 *	Grab the list subscribe url from the form action and make it work for an ajax post.
-         */
+    */
 		getAjaxSubmitUrl: function() {
 			var url = $("form#mc-embedded-subscribe-form").attr("action");
 			url = url.replace("/post?u=", "/post-json?u=");
@@ -244,25 +232,19 @@
 
 		    // On successful form submission, display a success message and reset the form
 		    if (resp.result == "success") {
-		        $('#mce-'+resp.result+'-response').show();
-		        $('#mce-'+resp.result+'-response').html(resp.msg);
+						showSuccessMessage(resp.msg)
 		        $('.email-form__input--email').blur();
-
-						//Reset the form
-		        // $('#mc-embedded-subscribe-form').each(function(){
-		        //     this.reset();
-		    		// });
-
 						$('.email-form').addClass("email-form--valid");
 
 						//Disable form inputs
 						disableInputs();
-
+						//Send GA event
             ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
 
 		    // If the form has errors, display them, inline if possible, or appended to #mce-error-response
 		    } else {
 					enableInputs()
+
 				// Example errors - Note: You only get one back at a time even if you submit several that are bad.
 				// Error structure - number indicates the index of the merge field that was invalid, then details
 				// Object {result: "error", msg: "6 - Please enter the date"}
@@ -296,7 +278,6 @@
 		        	// If index is -1 if means we don't have data on specifically which field was invalid.
 		        	// Just lump the error message into the generic response div.
 		            if (index == -1) {
-		              $('#mce-'+resp.result+'-response').show();
 		              $('#mce-'+resp.result+'-response').html(msg);
 		            } else {
 		                var fieldName = $("input[name*='"+fnames[index]+"']").attr('name'); // Make sure this exists (they haven't deleted the fnames array lookup)
@@ -304,9 +285,12 @@
 		                data[fieldName] = msg;
 		                mc.mce_validator.showErrors(data);
 		            }
-		        } catch(e){
-		            $('#mce-'+resp.result+'-response').show();
+								focusOnEmailInput();
+								showErrorMessage()
+
+		        } catch(e) {
 		            $('#mce-'+resp.result+'-response').html(msg);
+								showErrorMessage()
 		        }
 		    }
 		}
@@ -314,8 +298,8 @@
 
 	window.mc.mce_validator = $("#mc-embedded-subscribe-form").validate({
 
-		// Set error HTML: <div class="mce_inline_error"></div>
-		errorClass: "email-form__validation-message",
+		// Set error HTML: <div class="email-form__validation-message"></div>
+		errorClass: "form-error",
   	errorElement: "div",
 
   	// Validate fields on keyup, focusout and blur.
@@ -323,13 +307,13 @@
 
 		onfocusout: function(element) {
 			if (!mc.isTooEarly(element)) {
-				$(element).valid();
+				//$(element).valid();
 			}
 		},
 
 		onblur: function(element) {
 			if (!mc.isTooEarly(element)) {
-				$(element).valid();
+				//$(element).valid();
 			}
 		},
 
@@ -338,11 +322,16 @@
 		// it's strictly for visual display of errors
 		groups: mc.getGroups(),
 
+		highlight: function(element, errorClass, validClass) {
+			shakeForm()
+			showErrorMessage()
+  	},
+
 		// Place a field's inline error HTML
 		errorPlacement: function(error, element) {
-			$('.email-form__responces').append(error);
+			$('.email-form__error-message').html(error);
 			enableInputs();
-			hideAllMessages();
+			showErrorMessage();
     },
 
 		invalidHandler: function() {
@@ -350,9 +339,15 @@
 			hideAllMessages();
     },
 
+		showErrors: function(errorMap, errorList) {
+			var content = errorMap.EMAIL;
+			showErrorMessage(content);
+		},
+
     // Submit the form via ajax (see: jQuery Form plugin)
 		submitHandler: function(form) {
 			$(form).ajaxSubmit(mc.ajaxOptions);
+			hideAllMessages();
 			disableInputs();
 		}
  	});
@@ -391,8 +386,56 @@
 	};
 
 	function hideAllMessages() {
-		$('#mce-success-response').hide();
-		$('#mce-error-response').hide();
+		hideErrorMessage();
+		hideSuccessMessage();
+	};
+
+	function focusOnEmailInput() {
+		$(".email-form__input--email").focus();
+	};
+
+	var formShaking = false;
+	function shakeForm() {
+		if(!formShaking) {
+			$(".email-form").addClass("email-form--error")
+			formShaking = true
+		}
+		setTimeout(function(){
+			$(".email-form").removeClass("email-form--error")
+			formShaking = false
+		}, 600)
+	};
+
+	var errorMessageShown = false;
+	function showErrorMessage(content) {
+		if (!errorMessageShown) {
+			$(".email-form__error-message").addClass("email-form__error-message--shown")
+			$(".email-form__error-message").html(content);
+			errorMessageShown = true
+		}
+	};
+
+	function hideErrorMessage() {
+		if(!errorMessageShown) return
+		$(".email-form__error-message").removeClass("email-form__error-message--shown")
+		$(".email-form__error-message").html("");
+		errorMessageShown = false
+	};
+
+	var successMessageShown = false;
+	function showSuccessMessage(content) {
+		if (!successMessageShown) {
+			$(".email-form__success-message").addClass("email-form__success-message--shown")
+			$(".email-form__success-message").html(content);
+			successMessageShown = true
+		}
+	};
+
+	function hideSuccessMessage() {
+		if(!successMessageShown) return
+		$(".email-form__success-message").removeClass("email-form__success-message--shown")
+		$(".email-form__success-message").html("");
+		successMessageShown = false
 	};
 
 }(jQuery));

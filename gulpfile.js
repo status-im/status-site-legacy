@@ -71,6 +71,7 @@ gulp.task('watch', ['css', 'browserify', 'browser-sync'], function() {
   gulp.watch('src/scss/**/*.+(sass|scss)', ['css'])
   gulp.watch('src/*.html', browserSync.reload)
   gulp.watch('src/js/main.js', ['browserify'])
+  gulp.watch('src/js/mc-validate.js', ['browserify'])
 })
 
 gulp.task('build', ['clean', 'css', 'browserify', 'images', 'demo', 'dapps'], function() {
@@ -79,9 +80,9 @@ gulp.task('build', ['clean', 'css', 'browserify', 'images', 'demo', 'dapps'], fu
       .pipe(cleanCSS({compatibility: 'ie9'}))
       .pipe(gulp.dest('build/css'))
 
-  gulp.src(['src/js/app.js', 'src/js/mc-validate.js'])
-      .pipe(concat('app.js'))
+  gulp.src(['src/js/mc-validate.js','src/js/app.js'])
       .pipe(uglify())
+      //.on('error', gutil.log)
       .pipe(gulp.dest('build/js'))
 
   gulp.src('src/*.html')

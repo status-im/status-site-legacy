@@ -148,6 +148,11 @@ li.social-link a {
   background-image: url(../img/new-site/icon_sl.svg);
 }
 
+.social-link.social-link--gh a {
+  background-color: #535353;
+  background-image: url(../img/new-site/icon_gh.svg);
+}
+
 .social-link:hover a {
   transform: scale(1.06)
 }

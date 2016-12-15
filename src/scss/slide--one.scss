@@ -75,6 +75,13 @@
   position: relative;
 }
 
+.email-form.email-form--error .email-form__inner{
+  animation-duration: .6s;
+  animation-fill-mode: both;
+  animation-name: shakeIt;
+  animation-timing-function: ease
+}
+
 .email-form a {
   color: rgba(255, 255, 255, 1);
   font-family: $PostGroteskMedium;
@@ -85,6 +92,17 @@
   width: 100%;
   text-align: left;
   margin: 10px 0 0 0;
+}
+
+.email-form__error-message {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.email-form__error-message.email-form__error-message--shown {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .email-form__success-message {
@@ -99,10 +117,10 @@
 
   opacity: 0;
   transform: translate3d(0, 10px, 0);
-  transition: transform .6s ease,opacity .6s ease;
+  transition: transform .2s ease, opacity .2s ease;
 }
 
-.email-form--valid .email-form__success-message {
+.email-form__success-message.email-form__success-message--shown {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -720,6 +738,18 @@ input.email-form__input--email:disabled {
   .more-button {
     display: none;
   }
+}
 
+@keyframes shakeIt {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
 
+  20%, 60% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 80% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

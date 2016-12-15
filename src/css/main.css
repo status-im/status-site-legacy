@@ -340,6 +340,10 @@ li.social-link a {
   background-color: #E3306D;
   background-image: url(../img/new-site/icon_sl.svg); }
 
+.social-link.social-link--gh a {
+  background-color: #535353;
+  background-image: url(../img/new-site/icon_gh.svg); }
+
 .social-link:hover a {
   -ms-transform: scale(1.06);
   transform: scale(1.06); }
@@ -884,6 +888,12 @@ li.social-link a {
   width: 400px;
   position: relative; }
 
+.email-form.email-form--error .email-form__inner {
+  animation-duration: .6s;
+  animation-fill-mode: both;
+  animation-name: shakeIt;
+  animation-timing-function: ease; }
+
 .email-form a {
   color: white;
   font-family: "PostGrotesk-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
@@ -893,6 +903,15 @@ li.social-link a {
   width: 100%;
   text-align: left;
   margin: 10px 0 0 0; }
+
+.email-form__error-message {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: transform .2s ease, opacity .2s ease; }
+
+.email-form__error-message.email-form__error-message--shown {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); }
 
 .email-form__success-message {
   width: 100%;
@@ -905,9 +924,9 @@ li.social-link a {
   line-height: 22px;
   opacity: 0;
   transform: translate3d(0, 10px, 0);
-  transition: transform .6s ease,opacity .6s ease; }
+  transition: transform .2s ease, opacity .2s ease; }
 
-.email-form--valid .email-form__success-message {
+.email-form__success-message.email-form__success-message--shown {
   opacity: 1;
   transform: translate3d(0, 0, 0); }
 
@@ -1352,6 +1371,14 @@ input.email-form__input--email:disabled {
     border-bottom: none; }
   .more-button {
     display: none; } }
+
+@keyframes shakeIt {
+  0%, 100% {
+    transform: translate3d(0, 0, 0); }
+  20%, 60% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 80% {
+    transform: translate3d(4px, 0, 0); } }
 
 .slide.slide--two {
   padding: 40px 0 40px 0;
@@ -1849,7 +1876,7 @@ input.email-form__input--email:disabled {
 .slide.slide--four {
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 0 60px; }
+  padding: 40px 0 100px; }
 
 .slide.slide--four .slide__inner {
   border-radius: 8px;
