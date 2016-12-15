@@ -337,9 +337,11 @@
     },
 
 		showErrors: function(errorMap, errorList) {
-			var content = errorMap.EMAIL;
-			showErrorMessage(content);
-			shakeForm()
+			if(errorMap.hasOwnProperty("EMAIL")) {
+				shakeForm()
+				var content = errorMap.EMAIL;
+				showErrorMessage(content);
+			}
 		},
 
     // Submit the form via ajax (see: jQuery Form plugin)
