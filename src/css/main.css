@@ -344,6 +344,10 @@ li.social-link a {
   background-color: #535353;
   background-image: url(../img/new-site/icon_gh.svg); }
 
+.social-link.social-link--rd a {
+  background-color: #FF4501;
+  background-image: url(../img/new-site/icon_rd.svg); }
+
 .social-link:hover a {
   -ms-transform: scale(1.06);
   transform: scale(1.06); }
@@ -1309,6 +1313,8 @@ input.email-form__input--email:disabled {
   .email-form,
   .email-form__inner {
     width: auto; }
+  .email-form.email-form--error .email-form__inner {
+    animation: none; }
   .email-form__responces {
     margin-top: 5px; }
   .tagline .tagline__body {

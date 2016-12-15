@@ -652,6 +652,10 @@ input.email-form__input--email:disabled {
     width: auto;
   }
 
+  .email-form.email-form--error .email-form__inner{
+    animation: none;
+  }
+
   .email-form__responces {
     margin-top: 5px;
   }
