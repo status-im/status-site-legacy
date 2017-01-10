@@ -241,7 +241,7 @@
 						//Send GA event
             try {
                 ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
-            catch(e) {}
+            } catch(e) {}
 
 		    // If the form has errors, display them, inline if possible, or appended to #mce-error-response
 		    } else {
