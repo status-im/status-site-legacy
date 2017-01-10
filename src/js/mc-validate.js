@@ -239,7 +239,9 @@
 						//Disable form inputs
 						disableInputs();
 						//Send GA event
-            ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
+            try {
+                ga('send', 'event', 'Waitlist', 'Sign Up', 'Waitlist');
+            catch(e) {}
 
 		    // If the form has errors, display them, inline if possible, or appended to #mce-error-response
 		    } else {
