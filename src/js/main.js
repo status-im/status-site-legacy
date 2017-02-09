@@ -8,10 +8,10 @@ let iphone = document.querySelectorAll(".phone-wrap--iphone")[0],
     android = document.querySelectorAll(".phone-wrap--android")[0],
     features = document.querySelectorAll(".features-wrap")[0],
     slideTwo = document.querySelectorAll(".slide--two")[0],
-    slideThree = document.querySelectorAll(".slide--three")[0]
+    slideThree = document.querySelectorAll(".slide--three")[0],
+    cookieButton = document.querySelectorAll(".cookie-popup-button")[0]
 
 setTimeout(() => body.classList.add("shown"), 400)
-
 
 document.querySelectorAll(".more-button")[0].addEventListener('click', function(event){
     animateScroll(slideTwo, 600, "easeInOutCubic", 0)
@@ -25,6 +25,11 @@ document.querySelectorAll(".nav__item--features")[0].addEventListener('click', f
 
 document.querySelectorAll(".nav__item--about")[0].addEventListener('click', function(event){
     animateScroll(slideThree, 600, "easeInOutCubic", 0)
+    event.preventDefault()
+})
+
+cookieButton.addEventListener('click', function(event){
+    document.querySelectorAll(".cookie-popup__inner")[0].style.display = "none"
     event.preventDefault()
 })
 
