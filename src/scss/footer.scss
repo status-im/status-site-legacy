@@ -40,7 +40,7 @@
 .footer-address {
   color: $colorWhite;
   padding: 20px 0 0 0;
-  opacity: .8;
+  opacity: .5;
 }
 
 
@@ -55,7 +55,7 @@
 
 .footer-header {
   color: $colorWhite;
-  opacity: .8;
+  opacity: .5;
   font-size: 17px;
   margin: 0 0 40px 0;
 }
@@ -161,9 +161,7 @@
   }
 
   .footer-header {
-    margin: 0 0 10px 0;
-    opacity: .6
-  }
+    margin: 0 0 10px 0;  }
 
   .footer-logo-wrap__inner {
     width: 100%;
@@ -192,8 +190,5 @@
     display: none;
   }
 
-  .footer-address {
-    opacity: .6
-  }
 
 }

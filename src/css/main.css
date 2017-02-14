@@ -1989,7 +1989,7 @@ input.email-form__input--email:disabled {
 .footer-address {
   color: white;
   padding: 20px 0 0 0;
-  opacity: .8; }
+  opacity: .5; }
 
 .footer-table {
   display: -ms-flexbox;
@@ -2001,7 +2001,7 @@ input.email-form__input--email:disabled {
 
 .footer-header {
   color: white;
-  opacity: .8;
+  opacity: .5;
   font-size: 17px;
   margin: 0 0 40px 0; }
 
@@ -2089,8 +2089,7 @@ input.email-form__input--email:disabled {
     -ms-flex-order: 2;
     order: 2; }
   .footer-header {
-    margin: 0 0 10px 0;
-    opacity: .6; }
+    margin: 0 0 10px 0; }
   .footer-logo-wrap__inner {
     width: 100%;
     padding: 0 0 40px 0;
@@ -2109,6 +2108,4 @@ input.email-form__input--email:disabled {
   .footer-icon {
     display: none; }
   .footer-logo {
-    display: none; }
-  .footer-address {
-    opacity: .6; } }
+    display: none; } }
