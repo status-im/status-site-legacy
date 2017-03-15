@@ -73,6 +73,7 @@ gulp.task('dapps', function() {
       .pipe(gulp.dest('build/dapps'))
 })
 
+
 gulp.task('watch', ['css', 'browserify', 'browser-sync'], function() {
   gulp.watch('src/scss/**/*.+(sass|scss)', ['css'])
   gulp.watch('src/*.html', browserSync.reload)

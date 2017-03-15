@@ -9970,7 +9970,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       hideCookiePopup();
     }
 
-    document.querySelectorAll(".more-button")[0].addEventListener('click', function (event) {
+    document.querySelectorAll(".button--more")[0].addEventListener('click', function (event) {
       animateScroll(slideTwo, 600, "easeInOutCubic", 0);
       event.preventDefault();
     });

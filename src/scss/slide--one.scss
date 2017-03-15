@@ -313,29 +313,26 @@ input.email-form__input--email:disabled {
 //   transform: translate3d(0, 0, 0);
 // }
 
-.more-button {
-  font-family:$PostGroteskMedium;
-  text-transform: uppercase;
-  line-height: 15px;
-  text-align: center;
-  transform: translate3d(-50%, 0, 0);
-  padding: 14px 35px 14px;
-  font-size: 13px;
-  letter-spacing: 1px;
+.button.button--secondary {
   color: #6370CA;
   background-color: rgba(99, 112, 202, .1);
-  border-radius: 10px;
+  box-shadow: none;
+}
+
+.button.button--more {
+  padding: 0 35px;
+  transform: translate3d(-50%, 0, 0);
   position: absolute;
   bottom: 30px;
   left: 50%;
   transition: transform .2s ease, background-color .2s ease;
 }
 
-.more-button:hover {
+.button.button--secondary:hover {
   background-color: rgba(99, 112, 202, .2);
 }
 
-.more-button:active {
+.button.button--more:active {
   transform: translate3d(-50%, 0, 0) scale(.99)
 }
 
@@ -739,7 +736,7 @@ input.email-form__input--email:disabled {
     border-bottom: none;
   }
 
-  .more-button {
+  .button.button--more {
     display: none;
   }
 }
