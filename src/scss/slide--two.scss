@@ -68,7 +68,7 @@
 
 .dapp__inner {
   background-color: $colorWhite;
-  height: 220px;
+  height: 240px;
   margin: 10px;
   box-shadow: 0px 4px 18px 0px rgba(189,208,223,0.26);
   border-radius: 8px;
@@ -143,31 +143,31 @@
 }
 
 .dapp.dapp--one .dapp__image {
-  background-image: url(../img/new-site/image-messaging.png);
+  background-image: url(../img/new-site/uport-avatar@2x.png);
 }
 
 .dapp.dapp--two .dapp__image {
-  background-image: url(../img/new-site/image-payments.png);
+  background-image: url(../img/new-site/gnosis-avatar@2x.png);
 }
 
 .dapp.dapp--three .dapp__image {
-  background-image: url(../img/new-site/image-contracts.png);
+  background-image: url(../img/new-site/oasis-avatar@2x.png);
 }
 
 .dapp.dapp--four .dapp__image {
-  background-image: url(../img/new-site/image-wallet.png);
+  background-image: url(../img/new-site/ethlance-avatar@2x.png);
 }
 
 .dapp.dapp--five .dapp__image {
-  background-image: url(../img/new-site/image-multiuser.png);
+  background-image: url(../img/new-site/aragon-avatar@2x.png);
 }
 
 .dapp.dapp--six .dapp__image {
-  background-image: url(../img/new-site/image-exchange.png);
+  background-image: url(../img/new-site/etherisc-avatar@2x.png);
 }
 
 .dapp.dapp--seven .dapp__image {
-  background-image: url(../img/new-site/image-devtools.png);
+  background-image: url(../img/new-site/ujo-avatar@2x.png);
 }
 
 @media (max-width: 922px) {
