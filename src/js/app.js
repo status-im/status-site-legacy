@@ -10038,7 +10038,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }, {
         element: slideSix,
         reveal: {
-          when: 2200,
+          when: 2190,
           className: "slide--shown"
         }
       }]

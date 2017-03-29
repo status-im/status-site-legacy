@@ -102,7 +102,7 @@ new ScrollOver({
       element : slideSix,
       reveal:
         {
-          when : 2200,
+          when : 2190,
           className: "slide--shown"
         }
     }
