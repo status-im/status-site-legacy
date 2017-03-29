@@ -9,6 +9,7 @@ let iphone = document.querySelectorAll(".phone-wrap--iphone")[0],
     features = document.querySelectorAll(".features-wrap")[0],
     slideTwo = document.querySelectorAll(".slide--two")[0],
     slideThree = document.querySelectorAll(".slide--three")[0],
+    slideSix = document.querySelectorAll(".slide--six")[0],
     cookieButton = document.querySelectorAll(".cookie-popup-button")[0]
 
 setTimeout(() => body.classList.add("shown"), 400)
@@ -94,6 +95,14 @@ new ScrollOver({
       reveal:
         {
           when : 1400,
+          className: "slide--shown"
+        }
+    },
+    {
+      element : slideSix,
+      reveal:
+        {
+          when : 2200,
           className: "slide--shown"
         }
     }

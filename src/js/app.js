@@ -9959,6 +9959,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         features = document.querySelectorAll(".features-wrap")[0],
         slideTwo = document.querySelectorAll(".slide--two")[0],
         slideThree = document.querySelectorAll(".slide--three")[0],
+        slideSix = document.querySelectorAll(".slide--six")[0],
         cookieButton = document.querySelectorAll(".cookie-popup-button")[0];
 
     setTimeout(function () {
@@ -10032,6 +10033,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         element: slideThree,
         reveal: {
           when: 1400,
+          className: "slide--shown"
+        }
+      }, {
+        element: slideSix,
+        reveal: {
+          when: 2200,
           className: "slide--shown"
         }
       }]
