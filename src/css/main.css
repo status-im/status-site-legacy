@@ -449,7 +449,7 @@ li.social-link a {
   top: 60px;
   border-radius: 4px;
   transform: translate3d(-50%, 0, 0);
-  background-image: url(../img/new-site/ios_screen.png);
+  background-image: url(../img/new-site/IOS_Chat4.png);
   background-size: 270px; }
 
 .the-iphone-button {
@@ -505,7 +505,7 @@ li.social-link a {
   top: 50px;
   border-radius: 4px;
   transform: translate3d(-50%, 0, 0);
-  background-image: url(../img/new-site/screen_android2.png);
+  background-image: url(../img/new-site/Android_Chats.png);
   background-size: 262px; }
 
 .the-android-button {
@@ -1215,7 +1215,7 @@ input.email-form__input--email:disabled {
   width: 292px;
   height: 610px;
   left: 0;
-  top: 0;
+  top: -3px;
   z-index: 500; }
 
 .phone-wrap--android {
