@@ -105,7 +105,7 @@ gulp.task('build', ['clean', 'css', 'browserify', 'images', 'demo', 'dapps'], fu
       .pipe(gulp.dest('build'))
 
   gulp.src('src/*.pdf')
-      .pipe(useref({ noAssets:true }))
+      // .pipe(useref({ noAssets:true }))
       .pipe(gulp.dest('build'))
       
 })
