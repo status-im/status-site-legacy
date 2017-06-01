@@ -85,7 +85,7 @@ new ScrollOver({
       element : slideTwo,
       reveal:
         {
-          when : 700,
+          when : 440,
           className: "slide--shown"
         }
 
@@ -94,7 +94,7 @@ new ScrollOver({
       element : slideThree,
       reveal:
         {
-          when : 1400,
+          when : 1200,
           className: "slide--shown"
         }
     },
