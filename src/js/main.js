@@ -4,11 +4,11 @@ let animateScroll = require("./lib/animatescroll.js")
 let body = document.querySelectorAll("body")[0]
 let tagline = document.querySelectorAll(".tagline")[0]
 
-let iphone = document.querySelectorAll(".phone-wrap--iphone")[0],
-    android = document.querySelectorAll(".phone-wrap--android")[0],
-    features = document.querySelectorAll(".features-wrap")[0],
+let features = document.querySelectorAll(".features-wrap")[0],
+    slideAbout = document.querySelectorAll(".about")[0],
     slideTwo = document.querySelectorAll(".slide--two")[0],
     slideThree = document.querySelectorAll(".slide--three")[0],
+    slideFour = document.querySelectorAll(".slide--four")[0],
     slideSix = document.querySelectorAll(".slide--six")[0],
     cookieButton = document.querySelectorAll(".cookie-popup-button")[0]
 
@@ -20,7 +20,7 @@ if (statusCookiePolicyAccepted == "accepted") {
 }
 
 document.querySelectorAll(".button--more")[0].addEventListener('click', function(event){
-    animateScroll(slideTwo, 600, "easeInOutCubic", 0)
+    animateScroll(slideAbout, 600, "easeInOutCubic", 0)
     event.preventDefault()
 })
 
@@ -40,8 +40,8 @@ cookieButton.addEventListener('click', function(event){
     event.preventDefault()
 })
 
-document.querySelectorAll(".button--scroll-top")[0].addEventListener('click', function(event){
-    animateScroll(body, 600, "easeInOutCubic", 0)
+document.querySelectorAll(".app-button--ios")[0].addEventListener('click', function(event){
+    animateScroll(slideFour, 600, "easeInOutCubic", 0)
     setTimeout(function(){
       document.querySelectorAll(".email-form__input--email")[0].focus()
     }, 1000)
@@ -51,36 +51,6 @@ document.querySelectorAll(".button--scroll-top")[0].addEventListener('click', fu
 
 new ScrollOver({
   keyframes : [
-    {
-      element : iphone,
-      domain : [0, 800],
-      animate: [
-        {
-          property : "translateY",
-          range : [0, 60]
-        }
-      ]
-    },
-    {
-      element : android,
-      domain : [0, 800],
-      animate: [
-        {
-          property : "translateY",
-          range : [0, 110]
-        }
-      ]
-    },
-    {
-      element : features,
-      domain : [200, 800],
-      animate: [
-        {
-          property : "translateY",
-          range : [0, -40]
-        }
-      ]
-    },
     {
       element : slideTwo,
       reveal:

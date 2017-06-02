@@ -1,81 +1,186 @@
+.slide.slide--one {
+  width: 100%;
+}
+
 .slide.slide--one .slide__inner {
-  margin: 30px 0 0 0;
-  height: 780px;
-  background-color: #4957B8;
-  background-image: url(../img/new-site/dot.svg);
-  box-shadow: 0px 10px 14px 0px rgba(79,90,166,0.35);
-  border-radius: 10px;
-  transform: translate3d(0, 0, 0);
-  transition: transform .6s ease, opacity .3s ease;
+  margin: 0 0 0 0;
+  width: 100%;
 }
 
 .tagline {
   display: flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  position: absolute;
-  z-index: 200;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  width: 440px;
-  left: 90px;
-  top: 260px;
+  margin: 50px 0;
+}
+
+.crowdsale {
+  background-color: $colorWhite;
+  box-shadow: 0 5px 8px 0 rgba(72,89,102,0.10);
+  padding: 0 0 60px 0;
+  background-image: linear-gradient(0deg, #FFFFFF 0%, #F2F5F8 93%);
+}
+
+.crowdsale .tagline {
+  margin: 130px 0 30px 0;
 }
 
 .tagline .tagline__title {
+  width: 440px;
   font-family:$PostGroteskMedium;
-  color: $colorWhite;
-  font-size: 25px;
+  color: #49555F;
+  font-size: 27px;
   line-height: 35px;
   margin: 0 0 5px 0;
+}
 
+.crowdsale .tagline .tagline__title {
   opacity: 0;
   transform: translate3d(0, 20px, 0);
   transition: transform .6s ease, opacity .6s ease;
-  transition-delay: .1s;
+  transition-delay: .2s;
 }
 
-.shown .tagline__title {
+.shown .crowdsale .tagline .tagline__title {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
 .tagline .tagline__body {
-  color: $colorWhite;
+  width: 440px;
+  color: #70808D;
   opacity: .6;
   font-size: 18px;
-  line-height: 25px;
-  margin: 0 0 20px 0;
-
-  opacity: 0;
-  transform: translate3d(0, 20px, 0);
-  transition: transform .6s ease,opacity .6s ease;
-  transition-delay: .2s;
+  line-height: 26px;
+  margin: 10px 0 20px 0;
 }
 
-.shown .tagline__body {
-  opacity: .6;
-  transform: translate3d(0, 0, 0);
-}
-
-.tagline__form {
+.crowdsale .tagline .tagline__body {
   opacity: 0;
   transform: translate3d(0, 20px, 0);
   transition: transform .6s ease,opacity .6s ease;
   transition-delay: .3s;
 }
 
-.shown .tagline__form {
+
+.shown .crowdsale .tagline .tagline__body {
+  opacity: .6;
+  transform: translate3d(0, 0, 0);
+}
+
+.tagline__buttons {
+  display: flex;
+}
+
+.crowdsale .tagline .tagline__buttons {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: transform .6s ease,opacity .6s ease;
+  transition-delay: .4s;
+}
+
+.shown .crowdsale .tagline .tagline__buttons  {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+.tagline__buttons .button {
+  margin: 0 8px;
+  width: 224px;
+  padding: 0;
+}
+
+.tagline__buttons .button:hover {
+  box-shadow: 0 5px 12px 0 rgba(175,192,202,0.4);
+  transform: translate3d(0, -2px, 0);
+}
+
+.button.button--bg-white {
+  background-color: $colorWhite;
+  box-shadow: 0 3px 8px 0 rgba(175,192,202,0.48);
+}
+
+.button.button--color-blue {
+  color: #68C0F8;
+}
+
+.button.button--color-purple {
+  color: #6673CE;
+}
+
+.about {
+  padding: 50px 0 0 0
+}
+
+
+.app-buttons {
+  display: flex;
+  margin: 0 0 0 0;
+}
+
+.app-button {
+  display: block;
+  text-align: left;
+  width: 210px;
+  height: 68px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 0 8px 0 8px;
+  background: $colorWhite;
+  box-shadow: 0 3px 8px 0 rgba(175,192,202,0.48);
+  border-radius: 10px;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  transition: box-shadow .2s ease, transform .2s ease
+}
+
+.app-button:hover {
+  box-shadow: 0 5px 12px 0 rgba(175,192,202,0.4);
+  transform: translate3d(0, -2px, 0);
+}
+
+.app-button__title {
+  display: block;
+  color: #A9B3BB;
+  font-size: 14px;
+  line-height: 15px;
+  padding: 0 0 6px 0;
+}
+
+.app-button__platform {
+  display: block;
+  color: #49555F;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.app-button__icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background-size: 52px;
+}
+
+.app-button--android .app-button__icon {
+  background-image: url(../img/crowdsale/icon-android.svg);
+}
+
+.app-button--ios .app-button__icon {
+  background-image: url(../img/crowdsale/icon-apple.svg);
 }
 
 .email-form {
   display: flex;
   width: 400px;
   position: relative;
+  margin: 20px 0 0 0;
 }
 
-.email-form.email-form--error .email-form__inner{
+.email-form.email-form--error .email-form__inner {
   animation-duration: .6s;
   animation-fill-mode: both;
   animation-name: shakeIt;
@@ -83,7 +188,7 @@
 }
 
 .email-form a {
-  color: rgba(255, 255, 255, 1);
+  color: #6673CE;
   font-family: $PostGroteskMedium;
 }
 
@@ -92,6 +197,8 @@
   width: 100%;
   text-align: left;
   margin: 10px 0 0 0;
+  min-height: 80px;
+  color: #70808D;
 }
 
 .email-form__error-message {
@@ -111,8 +218,8 @@
   font-size: 15px;
   border-radius: 8px;
   text-align: left;
-  background-color: rgba(255, 255, 255, .12);
-  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
+  color: #70808D;
   line-height: 22px;
 
   opacity: 0;
@@ -139,8 +246,8 @@
 
 .email-form__input--email {
   text-align: left;
-  background-color: rgba(255, 255, 255, .12);
-  color: rgba(255, 255, 255, 1);
+  background-color: #E5EAEE;
+  color: #49555f;
   width: 215px;
   padding: 0 15px;
   margin: 0 10px 0 0;
@@ -153,8 +260,8 @@
 }
 
 input.email-form__input--email:disabled {
-  color: rgba(255, 255, 255, .4);
-  background-color: rgba(255, 255, 255, .12);
+  color: #8596A1;
+  background-color: #E5EAEE;
   opacity: 1;
 }
 
@@ -167,12 +274,12 @@ input.email-form__input--email:disabled {
 }
 
 .email-form__input--email:focus {
-  background-color: rgba(255, 255, 255, .2);
-  color: rgba(255, 255, 255, 1);
+  background-color: #E5EAEE;
+  color: #49555f;
 }
 
 .email-form__input--email::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, .6);
+  color: #8596A1;
 }
 
 .email-form__input--email::-moz-placeholder {
@@ -191,7 +298,6 @@ input.email-form__input--email:disabled {
   width: 175px;
   flex-shrink: 0;
   flex-grow: 0;
-  box-shadow: 0px 10px 10px 0px rgba(80,92,174,0.30);
 }
 
 .email-form input[type="submit"]:disabled {
@@ -283,11 +389,12 @@ input.email-form__input--email:disabled {
   z-index: 400
 }
 
-.features-wrap {
-  position: relative;
-  top: -139px;
-  width: 1180px;
-  height: 300px;
+.app-inner {
+  width: 1035px;
+  height: 537px;
+  margin: 0 auto;
+  background-size: 1035px;
+  background-image: url(../img/crowdsale/phone@2x.png);
 }
 
 .features {
@@ -295,12 +402,12 @@ input.email-form__input--email:disabled {
   width: 100%;
   height: 100%;
   align-items: flex-start;
-  justify-content: space-between;
-  padding: 20px 80px;
-
-  background: $colorWhite;
-  box-shadow: 0px -2px 18px 0px rgba(72,89,102,0.25);
+  justify-content: center;
+  padding: 0 80px 60px 20px;
   border-radius: 10px;
+  margin: -40px 0 0 0;
+
+  display: none;
 
   // opacity: 0;
   // transform: translate3d(0, 40px, 0);
@@ -319,26 +426,14 @@ input.email-form__input--email:disabled {
   box-shadow: none;
 }
 
-.button.button--more {
-  padding: 0 35px;
-  transform: translate3d(-50%, 0, 0);
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transition: transform .2s ease, background-color .2s ease;
-}
-
 .button.button--secondary:hover {
   background-color: rgba(99, 112, 202, .2);
-}
-
-.button.button--more:active {
-  transform: translate3d(-50%, 0, 0) scale(.99)
 }
 
 .features__item {
   text-align: center;
   width: 240px;
+  margin: 0 32px;
 }
 
 .features__icon {
@@ -375,63 +470,46 @@ input.email-form__input--email:disabled {
 }
 
 
+@media (max-width: 1280px) {
+
+
+}
+
 @media (max-width: 1220px) {
 
-  .features-wrap {
-    width: 1040px;
+
+}
+
+@media (max-width: 1080px) {
+
+  .crowdsale {
+    //min-height: 700px;
+    overflow: hidden;
   }
 
-  .features {
-    padding: 20px 50px;
+  .crowdsale .tagline {
+    margin: 430px 0 30px 0;
   }
 
-  .tagline {
-    left: 65px
+  .app {
+    position: relative;
+    height: 415px;
   }
 
-  .phones {
-    right: 40px;
+  .app-inner {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -400px;
+    width: 800px;
+    height: 415px;
+    background-size: 800px;
   }
 }
 
-@media (max-width: 1140px) {
 
-  .slide.slide--one {
-    margin: 20px 20px 0 20px;
-  }
-
-  .slide.slide--one .slide__inner {
-    margin: 0 0 0 0;
-    width: 100%;
-  }
-
-  .features-wrap {
-    width: 100%
-  }
-
-  .features {
-    width: auto;
-    margin: 0 20px;
-  }
-
-  .tagline {
-    justify-content: flex-start;
-    text-align: left;
-    left: 40px;
-  }
-
-}
 
 @media (max-width: 1030px) {
 
-  .tagline {
-    width: 300px;
-    top: 230px;
-  }
-
-  .email-form__success-message {
-
-  }
 
   .email-form.email-form--valid input[type="submit"] {
     display: none;
@@ -439,12 +517,12 @@ input.email-form__input--email:disabled {
 
   .email-form {
     flex-direction: column;
-    width: 300px;
+    //width: 300px;
   }
 
   .email-form__inner {
     flex-direction: column;
-    width: 300px;
+    //width: 300px;
   }
 
   .email-form__input--email {
@@ -460,115 +538,21 @@ input.email-form__input--email:disabled {
 
 @media (max-width: 960px) {
 
-  .tagline,
-  .email-form,
-  .email-form__inner {
-    width: 280px;
-  }
 
-  .features-wrap {
-    width: 100%;
-  }
 
-  .features {
-    padding: 20px
-  }
 }
 
 
 @media (max-width: 922px) {
 
-  .slide.slide--one .slide__inner {
-    height: 693px;
-  }
-
-
-  .tagline {
-    width: 260px;
-    top: 180px;
-  }
-
-  .email-form,
-  .email-form__inner {
-    width: 260px;
-  }
-
-  .phones {
-    width: 404px;
-    height: 548px;
-    top: 91px;
-  }
-
-  .phone-wrap--iphone {
-    width: 247px;
-    height: 516px;
-  }
-
-  .phone-wrap--android {
-    width: 246px;
-    height: 486px;
-    left: 149px;
-  }
-
-  .the-iphone {
-    width: 252px;
-    height: 516px;
-  }
-
-  .the-iphone-dot {
-    top: 26px;
-    width: 6px;
-    height: 6px;
-  }
-
-  .the-iphone-line {
-    top: 38px;
-    height: 5px;
-  }
-
-  .the-iphone-screen {
-    width: 229px;
-    height: 405px;
-    background-size: 229px;
-  }
-
-  .the-iphone-button {
-    width: 30px;
-    height: 30px;
-    bottom: 13px;
-  }
-
-  .the-android  {
-    width: 246px;
-    height: 486px;
-  }
-
-  .the-android-screen {
-    width: 222px;
-    height: 394px;
-    background-size: 222px;
-  }
-
-  .the-android-button {
-    bottom: 21px;
-  }
-
-  .features__item {
-    margin: 0 15px;
-  }
 }
 
 @media (max-width: 840px) {
 
-  .slide.slide--one .slide__inner {
-    height: 670px;
+  .email-form {
+    margin: 20px auto 0;
   }
 
-  .tagline {
-    left: 30px;
-  }
-
-  .tagline,
   .email-form,
   .email-form__inner  {
     width: 246px;
@@ -577,7 +561,6 @@ input.email-form__input--email:disabled {
   .tagline .tagline__title {
     font-size: 21px;
     line-height: 35px;
-    margin: 0 0 0 0;
   }
 
   .tagline .tagline__body {
@@ -615,38 +598,34 @@ input.email-form__input--email:disabled {
     right: 20px;
     top: 69px;
   }
-
 }
 
 @media (max-width: 767px) {
+
+  .about {
+    padding: 20px 0 0 0;
+  }
+
+  .app-buttons {
+    flex-direction: column;
+  }
+
+  .app-button {
+    margin: 8px 0 8px ;
+  }
 
   input.email-form__input--email {
     font-size: 16px;
   }
 
-  .slide.slide--one {
-    margin: 0;
-  }
-
-  .slide.slide--one .slide__inner {
-    height: auto;
-    border-radius: 0;
-  }
-
-  .tagline {
-    position: static;
-    flex-direction: column;
-    width: auto;
-    left: 0;
-    top: 0;
-    margin: 110px 0 0px 0;
-    padding: 0 20px;
-  }
-
-  .tagline,
   .email-form,
   .email-form__inner  {
     width: auto;
+    max-width: 300px;
+  }
+
+  .email-form__success-message {
+    margin: 0 0 40px 0;
   }
 
   .email-form.email-form--error .email-form__inner{
@@ -657,88 +636,33 @@ input.email-form__input--email:disabled {
     margin-top: 5px;
   }
 
+  .tagline .tagline__title {
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
   .tagline .tagline__body {
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+    padding: 0 20px;
     margin: 0 0 10px 0;
   }
 
-  .tagline__footer {
-    display: block;
-    margin-top: 24px;
-  }
-
-  .phones {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 340px;
-    width: auto;
-    max-width: 500px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  .phone-wrap--iphone {
-    left: 10px;
-    transform: translate3d(0, 0, 0) !important;
-  }
-
-  .phone-wrap--android {
-    left: auto;
-    right: 10px;
-    transform: translate3d(0, 0, 0) !important;
-  }
-
-  .features-wrap {
-    top: 0;
-    height: auto;
-  }
-
-  .features {
-    margin: 0;
-    border-radius: 0;
-    height: auto;
+  .tagline__buttons {
     flex-direction: column;
-    padding: 5px 20px 5px 10px;
   }
 
-  .features__item {
-    width: auto;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    margin: 0;
+  .tagline__buttons .button {
+    margin: 8px 0;
   }
 
-  .features__title {
-    font-size: 16px;
-    line-height: 20px;
+  .crowdsale .tagline {
+    margin: 390px 0 0 0
   }
 
-  .features__icon {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    background-position: center center;
-  }
-
-  .features__item--send .features__icon {
-    background-size: 70px
-  }
-
-  .features-text {
-    margin: 0 0 0 10px;
-    padding: 25px 0;
-    border-bottom: 1px solid #EEF2F5;
-  }
-
-  .features__item:nth-child(3) .features-text {
-    border-bottom: none;
-  }
-
-  .button.button--more {
-    display: none;
-  }
 }
 
 @keyframes shakeIt {
