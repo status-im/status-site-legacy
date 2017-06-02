@@ -9971,11 +9971,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       hideCookiePopup();
     }
 
-    document.querySelectorAll(".button--more")[0].addEventListener('click', function (event) {
-      animateScroll(slideAbout, 600, "easeInOutCubic", 0);
-      event.preventDefault();
-    });
-
     document.querySelectorAll(".nav__item--features")[0].addEventListener('click', function (event) {
       animateScroll(slideTwo, 600, "easeInOutCubic", 0);
       event.preventDefault();
