@@ -17,13 +17,13 @@
 
 .crowdsale {
   background-color: $colorWhite;
-  box-shadow: 0 5px 8px 0 rgba(72,89,102,0.10);
-  padding: 0 0 60px 0;
-  background-image: linear-gradient(0deg, #FFFFFF 0%, #F2F5F8 93%);
+  box-shadow: 0 5px 8px 0 rgba(72,89,102,0.06);
+  padding: 0 0 24px 0;
+  background-image: linear-gradient(-180deg, #F2F5F8 0%, #FAFBFC 99%);
 }
 
 .crowdsale .tagline {
-  margin: 130px 0 30px 0;
+  margin: 130px 0 60px 0;
 }
 
 .tagline .tagline__title {
@@ -106,6 +106,25 @@
 }
 
 .button.button--color-purple {
+  color: #6673CE;
+}
+
+.learn-more {
+  text-align: center;
+}
+
+.learn-more a {
+  font-family: $PostGroteskMedium;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  opacity: .4;
+  transition: opacity .2s ease, color .2s ease;
+}
+
+.learn-more a:hover {
+  opacity: 1;
   color: #6673CE;
 }
 
@@ -659,9 +678,15 @@ input.email-form__input--email:disabled {
     margin: 8px 0;
   }
 
-  .crowdsale .tagline {
-    margin: 390px 0 0 0
+  .button.button--bg-white {
+    background-color: $colorWhite;
+    box-shadow: 0 3px 6px 0 rgba(175,192,202,0.3);
   }
+
+  .crowdsale .tagline {
+    margin: 320px 0 14px 0;
+  }
+
 
 }
 

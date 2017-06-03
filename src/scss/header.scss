@@ -6,6 +6,12 @@
   z-index: 900;
   top: 40px;
   left: 0;
+  opacity: .6;
+  transition: opacity .2s ease;
+}
+
+.header:hover {
+  opacity: 1;
 }
 
 .header__inner {
@@ -56,11 +62,12 @@ a.logo {
 }
 
 .nav a {
-  font-family:$PostGroteskMedium;
+  //font-family:$PostGroteskMedium;
   font-size: 15px;
   display: flex;
   align-items: center;
   padding: 10px 15px 15px;
+  color: #70808D;
 }
 
 .header .nav a {
@@ -185,5 +192,7 @@ li.social-link a {
 
 @media (max-width: 767px) {
 
-
+  .header {
+    display: none;
+  }
 }

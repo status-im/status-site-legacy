@@ -20,7 +20,6 @@ if (statusCookiePolicyAccepted == "accepted") {
 }
 
 
-
 document.querySelectorAll(".nav__item--features")[0].addEventListener('click', function(event){
     animateScroll(slideTwo, 600, "easeInOutCubic", 0)
     event.preventDefault()
@@ -34,6 +33,11 @@ document.querySelectorAll(".nav__item--about")[0].addEventListener('click', func
 cookieButton.addEventListener('click', function(event){
     createCookie("status-cookie-policy", "accepted", 30)
     hideCookiePopup()
+    event.preventDefault()
+})
+
+document.querySelectorAll(".learn-more a")[0].addEventListener('click', function(event){
+    animateScroll(slideAbout, 600, "easeInOutCubic", 0)
     event.preventDefault()
 })
 

@@ -9987,6 +9987,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       event.preventDefault();
     });
 
+    document.querySelectorAll(".learn-more a")[0].addEventListener('click', function (event) {
+      animateScroll(slideAbout, 600, "easeInOutCubic", 0);
+      event.preventDefault();
+    });
+
     document.querySelectorAll(".app-button--ios")[0].addEventListener('click', function (event) {
       animateScroll(slideFour, 600, "easeInOutCubic", 0);
       setTimeout(function () {
