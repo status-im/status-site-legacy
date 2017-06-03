@@ -1300,6 +1300,8 @@ li.social-link a {
     height: 38px;
     top: 65px;
     left: 492px; }
+  .token-wrap:nth-child(4) {
+    display: none; }
   .token-wrap:nth-child(5) {
     width: 40px;
     height: 40px;
@@ -1311,10 +1313,10 @@ li.social-link a {
     top: 240px;
     left: 467px; }
   .token-wrap:nth-child(7) {
-    width: 52px;
-    height: 52px;
+    width: 46px;
+    height: 46px;
     top: 100px;
-    left: 397px; }
+    left: 407px; }
   .token-wrap:nth-child(8) {
     width: 46px;
     height: 46px;
