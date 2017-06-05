@@ -268,10 +268,14 @@ a.logo {
   -ms-flex-align: center;
   align-items: center;
   padding: 10px 15px 15px;
-  color: #70808D; }
+  color: #70808D;
+  transition: opacity .2s ease, color .2s ease; }
 
 .header .nav a {
   color: #49555F; }
+
+.header .nav a:hover {
+  color: #6673CE; }
 
 .header .nav a.nav__item--blog::before {
   content: "";
@@ -287,9 +291,6 @@ a.logo {
 .header .nav a.nav__item--blog:hover::before {
   transform: translate3d(0, 0, 0) rotate(0deg);
   opacity: .4; }
-
-.nav a:hover {
-  opacity: .9; }
 
 .shares {
   width: 260px;
