@@ -9960,7 +9960,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         slideThree = document.querySelectorAll(".slide--three")[0],
         slideFour = document.querySelectorAll(".slide--four")[0],
         slideSix = document.querySelectorAll(".slide--six")[0],
-        cookieButton = document.querySelectorAll(".cookie-popup-button")[0];
+        cookieButton = document.querySelectorAll(".cookie-popup-button")[0],
+        languageSelect = document.querySelectorAll('.language-switcher')[0];
 
     setTimeout(function () {
       return body.classList.add("shown");
@@ -10061,4 +10062,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     function eraseCookie(name) {
       createCookie(name, "", -1);
     }
+
+    languageSelect.addEventListener("change", function () {
+      var lang = languageSelect.options[languageSelect.selectedIndex].value;
+      if (lang == "en") {
+        window.location.replace("https://status.im/");
+        return;
+      }
+      window.location.replace("https://status.im/" + lang + ".html");
+    });
   }, { "./lib/ScrollOver.js": 17, "./lib/animatescroll.js": 18 }] }, {}, [19]);

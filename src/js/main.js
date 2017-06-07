@@ -10,7 +10,8 @@ let features = document.querySelectorAll(".features-wrap")[0],
     slideThree = document.querySelectorAll(".slide--three")[0],
     slideFour = document.querySelectorAll(".slide--four")[0],
     slideSix = document.querySelectorAll(".slide--six")[0],
-    cookieButton = document.querySelectorAll(".cookie-popup-button")[0]
+    cookieButton = document.querySelectorAll(".cookie-popup-button")[0],
+    languageSelect = document.querySelectorAll('.language-switcher')[0]
 
 setTimeout(() => body.classList.add("shown"), 400)
 
@@ -119,3 +120,12 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name,"",-1);
 }
+
+languageSelect.addEventListener("change", function () {
+    let lang = languageSelect.options[languageSelect.selectedIndex].value
+    if (lang == "en") {
+      window.location.replace("https://status.im/")
+      return
+    }
+    window.location.replace("https://status.im/" + lang + ".html")
+})

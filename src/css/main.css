@@ -2471,6 +2471,10 @@ input.email-form__input--email:disabled {
   height: auto;
   width: auto; }
 
+.slide--no-form .button {
+  max-width: 240px;
+  margin: 16px auto 32px; }
+
 @media (max-width: 767px) {
   .slide.slide--four {
     padding: 0px 0px 0 0px; } }
