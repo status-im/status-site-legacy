@@ -31,6 +31,16 @@ document.querySelectorAll(".nav__item--about")[0].addEventListener('click', func
     event.preventDefault()
 })
 
+if(document.querySelectorAll(".nav__item--download")[0]) {
+  document.querySelectorAll(".nav__item--download")[0].addEventListener('mouseover', function(event){
+      showQRPopup()
+  })
+
+  document.querySelectorAll(".nav__item--download")[0].addEventListener('mouseout', function(event){
+      hideQRPopup()
+  })
+}
+
 cookieButton.addEventListener('click', function(event){
     createCookie("status-cookie-policy", "accepted", 30)
     hideCookiePopup()
@@ -81,6 +91,14 @@ new ScrollOver({
   ]
 }).init()
 
+function showQRPopup() {
+  addClassToElement(document.querySelectorAll(".qr-popup")[0], "qr-popup--shown")
+}
+
+function hideQRPopup() {
+  removeClassFromElement(document.querySelectorAll(".qr-popup")[0], "qr-popup--shown")
+}
+
 function hideCookiePopup() {
   document.querySelectorAll(".cookie-popup__inner")[0].style.display = "none"
   return true
@@ -129,3 +147,18 @@ languageSelect.addEventListener("change", function () {
     }
     window.location.replace("https://status.im/" + lang + ".html")
 })
+
+/*---Utils---*/
+function addClassToElement(element, className) {
+  (element.classList) ? element.classList.add(className) : element.className += ' ' + className
+  return element
+}
+
+function removeClassFromElement(element, className) {
+  if(element.classList) {
+    element.classList.remove(className)
+  } else {
+    element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
+  }
+  return element
+}
